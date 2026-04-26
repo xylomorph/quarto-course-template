@@ -1,13 +1,21 @@
 ---
 title: "{{ course.title }}"
 {% if course.subtitle is defined and course.subtitle %}subtitle: "{{ course.subtitle }}"
-{% endif %}
+{% endif %}author: "{{ course.instructors | map(attribute='name') | join(', ') }}"
+organization: "{{ course.organization.institution }}"
+institute: "{{ course.organization.institute }}"
+email: "{{ course.instructors | selectattr('email', 'defined') | map(attribute='email') | join(', ') }}"
+course: "{{ course.title }}"
+term: "{{ course.semester }}"
 format:
   html: default
   pdf:
     documentclass: article
     papersize: a4
     toc: false
+    include-in-header: assets/latex/_handout-packages.tex
+    template-partials:
+      - assets/latex/before-body.tex
 ---
 
 ## {{ i18n.index.welcome }}
@@ -37,9 +45,3 @@ TODO: Add a short description or welcome message for the course.
 - **{{ i18n.index.labels.end }}:** {{ course.schedule.end_date }}
 - **{{ i18n.index.labels.weekly_day }}:** {{ course.schedule.weekly_day }}
 
-## {{ i18n.index.modules }}
-
-{% for module in modules %}
-- [{{ module.title }}](content/modules/{{ module.id }}.qmd){% if module.subtitle is defined and module.subtitle %} — {{ module.subtitle }}{% endif %}
-
-{% endfor %}

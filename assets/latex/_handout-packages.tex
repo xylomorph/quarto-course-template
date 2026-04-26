@@ -1,0 +1,40 @@
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+% Search for images relative to project root at depth 0 (root), 1 (content/), and 2 (content/sub/)
+\graphicspath{{assets/images/}{../assets/images/}{../../assets/images/}}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\setmainfont{P052}
+\usepackage[a4paper, top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headheight=60pt, headsep=8pt, footskip=1.5cm]{geometry}
+\newlength{\handoutlogooffset}
+\AtBeginDocument{%
+  \newlength{\handoutcapht}%
+  \settoheight{\handoutcapht}{\small A}%
+  \setlength{\handoutlogooffset}{\dimexpr1.2cm-\handoutcapht\relax}%
+}
+% style for Argdown codeblocks
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+\mdfdefinestyle{codedefault}{%
+backgroundcolor=black!4,
+roundcorner=2pt,
+linecolor=black!30,
+linewidth=0.5pt,
+leftmargin=10, rightmargin=10,
+rightline=true,
+innerleftmargin=10,innerrightmargin=10}
+% redefining the Shaded-Environment of the pandoc-template to allow customised
+% style-settings
+% Must run at \begin{document} because pandoc defines Shaded after include-in-header
+\AtBeginDocument{%
+  \ifdefined\Shaded
+    \renewenvironment{Shaded}{\centering \begin{mdframed}[style=codedefault]}{\end{mdframed}}%
+  \else
+    \newenvironment{Shaded}{\centering \begin{mdframed}[style=codedefault]}{\end{mdframed}}%
+  \fi
+}
+
+% Adjust fontsize for code-blocks if necessary (by redefining the
+% Highlighting-Environment of the pandoc-template)
+%\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\small}

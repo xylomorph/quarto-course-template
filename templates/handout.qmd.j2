@@ -1,12 +1,22 @@
 ---
 title: "{{ module.title }}{% if module.subtitle is defined and module.subtitle %}: {{ module.subtitle }}{% endif %}"
 {% if module.date is defined %}date: "{{ module.date }}"
-{% endif %}format:
+{% endif %}author: "{{ course.instructors | map(attribute='name') | join(', ') }}"
+organization: "{{ course.organization.institution }}"
+institute: "{{ course.organization.institute }}"
+email: "{{ course.instructors | selectattr('email', 'defined') | map(attribute='email') | join(', ') }}"
+course: "{{ course.title }}"
+term: "{{ course.semester }}"
+format:
 {% if 'website' in (artifact.output_formats | default([])) %}  html: default
 {% endif %}  pdf:
     documentclass: article
     papersize: a4
     toc: false
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+reference-section-title: "{{ i18n.handout.references }}"
 ---
 
 ## {{ i18n.handout.learning_objectives }}

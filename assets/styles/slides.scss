@@ -1,13 +1,261 @@
 /*-- scss:defaults --*/
 
-// Override reveal.js Sass variables here.
-// Full list: https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables
-//
-// Examples:
-// $font-size-root: 32px;
-// $presentation-heading-font: "Source Sans Pro", sans-serif;
-// $presentation-font-size-root: 32px;
+$font-family-sans-serif: "Arial", sans-serif;
+$presentation-font-size-root: 26px;
+$presentation-h2-font-size: 1em;
+$presentation-h3-font-size: 1em;
+
+// HHU Primary colors
+$hhu-blue:     #006ab3;  // HHU Blau – primary/logo color
+$hhu-black:    #000000;  // Schwarz – body text only
+
+// HHU Secondary colors
+$hhu-green:    #8cb110;
+$hhu-orange:   #ee7f00;
+$hhu-red:      #be0a26;
+$hhu-teal:     #57bab1;
+$hhu-darkblue: #003964;
+$hhu-iceblue:  #b5cbd6;
+
+// Callout colors (mapped to HHU palette)
+$callout-color-note:      $hhu-blue;      // HHU Blau
+$callout-color-tip:       $hhu-green;     // HHU Grün
+$callout-color-warning:   $hhu-orange;    // HHU Orange
+$callout-color-caution:   $hhu-red;       // HHU Rot
+$callout-color-important: $hhu-darkblue;  // HHU Dunkelblau
+
+
 
 /*-- scss:rules --*/
 
-/* Custom styles for reveal.js slide decks */
+.reveal .slide-logo {
+    max-height: 80px !important;
+  }
+
+.reveal h1,
+.reveal .title,
+.reveal .subtitle {
+    color: $hhu-blue;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+  }
+
+.reveal h2 {
+    color: $hhu-blue;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+  }
+
+/*-- callout color overrides --*/
+
+.reveal .callout-note {
+  border-left-color: $hhu-blue !important;
+  background-color: rgba(0, 106, 179, 0.07);
+}
+.reveal .callout-note .callout-header {
+  background-color: rgba(0, 106, 179, 0.28);
+  color: $hhu-blue;
+}
+
+.reveal .callout-tip {
+  border-left-color: $hhu-green !important;
+  background-color: rgba(140, 177, 16, 0.07);
+}
+.reveal .callout-tip .callout-header {
+  background-color: rgba(140, 177, 16, 0.28);
+  color: darken($hhu-green, 10%);
+}
+
+.reveal .callout-warning {
+  border-left-color: $hhu-orange !important;
+  background-color: rgba(238, 127, 0, 0.07);
+}
+.reveal .callout-warning .callout-header {
+  background-color: rgba(238, 127, 0, 0.28);
+  color: darken($hhu-orange, 10%);
+}
+
+.reveal .callout-caution {
+  border-left-color: $hhu-red !important;
+  background-color: rgba(190, 10, 38, 0.07);
+}
+.reveal .callout-caution .callout-header {
+  background-color: rgba(190, 10, 38, 0.28);
+  color: $hhu-red;
+}
+
+.reveal .callout-important {
+  border-left-color: $hhu-darkblue !important;
+  background-color: rgba(0, 57, 100, 0.07);
+}
+.reveal .callout-important .callout-header {
+  background-color: rgba(0, 57, 100, 0.28);
+  color: $hhu-darkblue;
+}
+
+/*-- chat message formatting --*/
+
+
+.chat {
+  font-family: system-ui, sans-serif;
+  font-size: 0.7em;
+  width: 100%;
+  /*--border: solid 1px #EEE;--*/
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin-top: -20px;
+}
+
+.messages {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  border-radius: 10px;
+  padding: 1px 15px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
+.yours {
+  align-items: flex-start;
+}
+
+.yours .message {
+  margin-right: 20%;
+  background-color: #eee;
+  position: relative;
+}
+
+.yours .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  border-bottom-right-radius: 15px;
+}
+.yours .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+}
+
+.mine {
+  align-items: flex-end;
+}
+
+.mine .message {
+  color: white;
+  margin-left: 20%;
+  background: #0085D1;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.mine .message.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: #0085D1;
+  background-attachment: fixed;
+  border-bottom-left-radius: 15px;
+}
+
+.mine .message.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+}
+
+/*-- annotation classes --*/
+
+// .ann-highlight — neutral yellow marker
+.reveal .ann-highlight {
+  background: rgba(255, 210, 50, 0.40);
+  border-bottom: 2px solid rgba(230, 170, 0, 0.70);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+// .ann-premise — premise marker (HHU Blau)
+.reveal .ann-premise {
+  background: rgba($hhu-blue, 0.15);
+  border-bottom: 2px solid $hhu-blue;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+// .ann-conclusion — conclusion marker (HHU Grün, bold)
+.reveal .ann-conclusion {
+  background: rgba($hhu-green, 0.18);
+  border-bottom: 2px solid $hhu-green;
+  padding: 0 3px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+// .ann-key — key term (HHU Orange, bottom border only)
+.reveal .ann-key {
+  border-bottom: 2.5px solid $hhu-orange;
+  padding-bottom: 1px;
+  font-style: italic;
+}
+
+// .ann-doubt — sceptical/doubt passage (HHU Rot, left border)
+.reveal .ann-doubt {
+  background: rgba($hhu-red, 0.10);
+  border-left: 3px solid $hhu-red;
+  padding: 0 4px 0 6px;
+  border-radius: 2px;
+}
+
+// .ann-marginal — marginal note via data-note attribute
+// Usage: [text]{.ann-marginal data-note="your comment"}
+.reveal .ann-marginal {
+  position: relative;
+  background: rgba($hhu-darkblue, 0.10);
+  padding: 0 3px;
+  border-radius: 2px;
+
+  &::after {
+    content: attr(data-note);
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-size: 0.62em;
+    font-style: italic;
+    color: $hhu-darkblue;
+    background: rgba($hhu-iceblue, 0.55);
+    border: 1px solid $hhu-iceblue;
+    border-radius: 3px;
+    padding: 1px 5px;
+    pointer-events: none;
+  }
+}

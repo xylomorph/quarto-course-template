@@ -3,19 +3,19 @@ title: "{{ module.title }}"
 {% if module.subtitle is defined and module.subtitle %}subtitle: "{{ module.subtitle }}"
 {% endif %}date: "{{ module.date }}"
 {% if module.status is defined %}status: "{{ module.status }}"
-{% endif %}---
+{% endif %}author: "{{ course.instructors | map(attribute='name') | join(', ') }}"
+organization: "{{ course.organization.institution }}"
+institute: "{{ course.organization.institute }}"
+email: "{{ course.instructors | selectattr('email', 'defined') | map(attribute='email') | join(', ') }}"
+course: "{{ course.title }}"
+term: "{{ course.semester }}"
+---
 
 ## {% raw %}{{< fa circle-info >}}{% endraw %} {{ i18n.module_page.overview }}
 
 {{ module.description | default("TODO: Add module description.") | trim }}
 
-## {% raw %}{{< fa bullseye >}}{% endraw %} {{ i18n.module_page.learning_objectives }}
 
-{% if module.learning_objectives is defined and module.learning_objectives %}
-{{ module.learning_objectives | trim }}
-{% else %}
-- TODO: Add learning objectives
-{% endif %}
 
 {% set slides_list = module.artifacts | default([]) | of_type("slides") | enabled %}
 {% if slides_list %}
@@ -54,39 +54,10 @@ title: "{{ module.title }}"
 {% endif %}
 {% endif %} {# end slides #}
 
-{% set handout_list = module.artifacts | default([]) | of_type("handout") | enabled %}
-{% if handout_list %}
-{% set handout = handout_list | first %}
-{% set handout_name = handout.file | basename | replace('.qmd', '') %}
-{% if handout.status in ('published', 'archived') %}
-
-## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }}
-
-{% if 'pdf' in (handout.output_formats | default([])) %} [Handout as PDF](../handouts/{{ handout_name }}.pdf){target="_blank"} {% endif %}
-
-{% else %}
-
-## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }} 
-
-🚧 {{ i18n.module_page.coming_soon }}
-
-<!--
-## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }}
-
-{% if 'pdf' in (handout.output_formats | default([])) %} [Handout as PDF](../handouts/{{ handout_name }}.pdf){target="_blank"} {% endif %}
--->
-
-{% endif %}
-{% endif %} {# end handout #}
-
-
-## {{ i18n.module_page.content }}
-
-TODO: Add content.
 
 {% set enabled_artifacts = module.artifacts | default([]) | enabled %}
 {% if enabled_artifacts %}
-## {{ i18n.module_page.materials }}
+## {% raw %}{{< fa folder-open >}}{% endraw %} {{ i18n.module_page.materials }}
 
 {% for artifact in enabled_artifacts %}
 {% set art_base = "../" + artifact.file | replace('content/', '', 1) | replace('.qmd', '') %}
