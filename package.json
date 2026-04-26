@@ -1,0 +1,14 @@
+{
+  "name": "my-course",
+  "version": "1.0.0",
+  "description": "Quarto course website",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@argdown/cli": "^1.7.5",
+    "@argdown/image-export": "^1.7.5",
+    "@argdown/pandoc-filter": "^1.7.7"
+  }
+}

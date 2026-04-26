@@ -7,8 +7,13 @@ institute: "{{ course.organization.institute }}"
 email: "{{ course.instructors | selectattr('email', 'defined') | map(attribute='email') | join(', ') }}"
 course: "{{ course.title }}"
 term: "{{ course.semester }}"
+lang: "{{ course.language | default('en') }}"
 format:
-{% if 'website' in (artifact.output_formats | default([])) %}  html: default
+{% if 'website' in (artifact.output_formats | default([])) %}  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
 {% endif %}  pdf:
     documentclass: article
     papersize: a4
@@ -16,6 +21,15 @@ format:
     include-in-header: ../../assets/latex/_handout-packages.tex
     template-partials:
       - ../../assets/latex/before-body.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+filters:
+  - ../../node_modules/.bin/argdown-filter
+argdown:
+  mode: inline
+  format: svg
+  config: ../../argdown.config.json
 reference-section-title: "{{ i18n.handout.references }}"
 ---
 

@@ -7,6 +7,7 @@ institute: "{{ course.organization.institute }}"
 email: "{{ course.instructors | selectattr('email', 'defined') | map(attribute='email') | join(', ') }}"
 course: "{{ course.title }}"
 term: "{{ course.semester }}"
+lang: "{{ course.language | default('en') }}"
 format:
   revealjs:
     theme: [default, ../../assets/styles/slides.scss]
@@ -14,20 +15,22 @@ format:
     # embed-resources: true (not compatible with argdown using web components)
     preview-links: auto
     pdfSeparateFragments: true
-    logo: ../../assets/images/Logo_HHU_vertikal.png
+    logo: ../../assets/images/logo.png
     controls: true
-filters:
+{% if 'beamer' in (artifact.output_formats or []) %}  beamer:
+    theme: Madrid
+    colortheme: seahorse
+    include-in-header: ../../assets/latex/_beamer-packages.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+{% endif %}filters:
   - ../../node_modules/.bin/argdown-filter
 argdown:
   sourceHighlighter: web-component
   mode: web-component
-{% if 'beamer' in (artifact.output_formats or []) %}  beamer:
-    theme: Madrid
-    colortheme: seahorse
-    include-in-header: ../../assets/latex/_handout-packages.tex
-    template-partials:
-      - ../../assets/latex/before-body.tex
-{% endif %}---
+  config: ../../argdown.config.json
+---
 
 ## Outline
 

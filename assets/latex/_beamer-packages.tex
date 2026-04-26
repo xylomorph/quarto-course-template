@@ -1,0 +1,21 @@
+% style for Argdown codeblocks in Beamer slides
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xcolor}
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+\mdfdefinestyle{codedefault}{%
+backgroundcolor=black!4,
+roundcorner=2pt,
+linecolor=black!30,
+linewidth=0.5pt,
+leftmargin=10, rightmargin=10,
+rightline=true,
+innerleftmargin=10,innerrightmargin=10}
+% Redefine the pandoc Shaded environment to use mdframed
+% Must run at \begin{document} because pandoc defines Shaded after include-in-header
+\AtBeginDocument{%
+  \ifdefined\Shaded
+    \renewenvironment{Shaded}{\centering \begin{mdframed}[style=codedefault]}{\end{mdframed}}%
+  \else
+    \newenvironment{Shaded}{\centering \begin{mdframed}[style=codedefault]}{\end{mdframed}}%
+  \fi
+}

@@ -1,0 +1,12 @@
+{
+  "webComponent": {
+    "withoutHeader": true,
+    "views": {
+      "source": true,
+      "map": false
+    }
+  },
+  "sourceHighlighter": {
+    "removeFrontMatter": true
+  }
+}

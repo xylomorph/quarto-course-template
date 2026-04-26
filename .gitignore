@@ -5,11 +5,17 @@ docs/
 .quarto/
 *_cache/
 *_files/
+# Quarto extension
+_extensions/
 
 # Python
 __pycache__/
 *.py[oc]
 .venv/
+
+# Node / npm
+node_modules/
+package-lock.json
 
 # OS
 .DS_Store
