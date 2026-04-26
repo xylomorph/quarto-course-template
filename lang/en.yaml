@@ -1,0 +1,83 @@
+# English UI strings for quarto-course-template.
+# These are used by tools/generate.py when rendering .qmd stubs and nav config.
+# Override individual values in course.yaml under course.i18n, or copy this file
+# to lang/en.yaml in your project and edit it directly.
+
+artifact_labels:
+  slides: "Slides"
+  handout: "Handout"
+  notes: "Notes"
+  assignment: "Assignment"
+  syllabus: "Syllabus"
+
+nav:
+  home: "Home"
+  syllabus: "Syllabus"
+  materials: "Materials"
+
+module_page:
+  overview: "Overview"
+  learning_objectives: "Learning Objectives"
+  slides: "Slides"
+  handout: "Handout"
+  content: "Content"
+  materials: "Materials"
+  coming_soon: "In preparation ..."
+
+handout:
+  learning_objectives: "Learning Objectives"
+  content: "Content"
+  exercises: "Exercises"
+
+notes:
+  notes: "Notes"
+  key_concepts: "Key Concepts"
+  references: "References"
+
+assignment:
+  title_suffix: "Assignment"
+  instructions: "Instructions"
+  tasks: "Tasks"
+  submission: "Submission"
+
+syllabus:
+  title: "Syllabus"
+  course_information: "Course Information"
+  labels:
+    course: "Course"
+    subtitle: "Subtitle"
+    semester: "Semester"
+    ects: "ECTS"
+    language: "Language"
+    institution: "Institution"
+    department: "Department"
+    start: "Start"
+    end: "End"
+    weekly_day: "Weekly day"
+  instructors: "Instructors"
+  schedule: "Schedule"
+  modules: "Modules"
+  table_headers:
+    num: "#"
+    date: "Date"
+    title: "Title"
+    status: "Status"
+  tbd: "TBD"
+  learning_objectives: "Learning Objectives"
+  todo: "TODO"
+
+index:
+  welcome: "Welcome"
+  course_information: "Course Information"
+  labels:
+    semester: "Semester"
+    ects: "ECTS"
+    language: "Language"
+    institution: "Institution"
+    department: "Department"
+    start: "Start"
+    end: "End"
+    weekly_day: "Weekly day"
+  instructors: "Instructors"
+  schedule: "Schedule"
+  modules: "Modules"

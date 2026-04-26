@@ -1,0 +1,22 @@
+---
+title: "{{ module.title }}: {{ i18n.assignment.title_suffix }}"
+{% if module.date is defined %}date: "{{ module.date }}"
+{% endif %}format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+{% if module.lms is defined and module.lms.due %}due: "{{ module.lms.due }}"
+{% endif %}---
+
+## {{ i18n.assignment.instructions }}
+
+TODO: Describe the assignment task.
+
+## {{ i18n.assignment.tasks }}
+
+1. TODO
+
+## {{ i18n.assignment.submission }}
+
+TODO: Add submission instructions.

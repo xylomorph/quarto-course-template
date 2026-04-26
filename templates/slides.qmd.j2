@@ -1,0 +1,24 @@
+---
+title: "{{ module.title }}{% if module.subtitle is defined and module.subtitle %}: {{ module.subtitle }}{% endif %}"
+{% if module.date is defined %}date: "{{ module.date }}"
+{% endif %}format:
+  revealjs:
+    theme: [default, ../../assets/styles/slides.scss]
+    slide-number: true
+    preview-links: auto
+{% if 'beamer' in (artifact.output_formats or []) %}  beamer:
+    theme: Madrid
+    colortheme: seahorse
+{% endif %}---
+
+## Outline
+
+TODO: Replace with section overview.
+
+## Section
+
+TODO: Add slide content.
+
+## Summary
+
+TODO: Summarise key points.

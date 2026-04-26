@@ -1,0 +1,11 @@
+---
+{% if module is defined %}title: "{{ module.title }}{% if module.subtitle is defined and module.subtitle %}: {{ module.subtitle }}{% endif %}"
+{% if module.date is defined %}date: "{{ module.date }}"
+{% endif %}{% elif course is defined %}title: "{{ course.title }}"
+{% else %}title: "{{ artifact.id | default('Untitled') }}"
+{% endif %}format: html
+---
+
+## {{ i18n.module_page.overview }}
+
+TODO: Add content for **{{ artifact.id | default(artifact.type | default('this artifact')) }}**.

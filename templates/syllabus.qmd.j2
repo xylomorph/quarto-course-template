@@ -1,0 +1,55 @@
+---
+title: "{{ i18n.syllabus.title }}"
+subtitle: "{{ course.title }}{% if course.subtitle is defined and course.subtitle %}: {{ course.subtitle }}{% endif %}"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+---
+
+## {{ i18n.syllabus.course_information }}
+
+| | |
+|---|---|
+| **{{ i18n.syllabus.labels.course }}** | {{ course.title }} |
+{% if course.subtitle is defined and course.subtitle %}| **{{ i18n.syllabus.labels.subtitle }}** | {{ course.subtitle }} |
+{% endif %}| **{{ i18n.syllabus.labels.semester }}** | {{ course.semester }} |
+| **{{ i18n.syllabus.labels.ects }}** | {{ course.ects }} |
+| **{{ i18n.syllabus.labels.language }}** | {{ course.language | upper }} |
+| **{{ i18n.syllabus.labels.institution }}** | {{ course.organization.institution }} |
+| **{{ i18n.syllabus.labels.department }}** | {{ course.organization.department }} |
+
+## {{ i18n.syllabus.instructors }}
+
+{% for inst in course.instructors %}
+- **{{ inst.name }}**{% if inst.role is defined %} ({{ inst.role }}){% endif %}{% if inst.email is defined %} — {{ inst.email }}{% endif %}
+
+{% endfor %}
+
+## {{ i18n.syllabus.schedule }}
+
+- **{{ i18n.syllabus.labels.start }}:** {{ course.schedule.start_date }}
+- **{{ i18n.syllabus.labels.end }}:** {{ course.schedule.end_date }}
+- **{{ i18n.syllabus.labels.weekly_day }}:** {{ course.schedule.weekly_day }}
+
+## {{ i18n.syllabus.modules }}
+
+| {{ i18n.syllabus.table_headers.num }} | {{ i18n.syllabus.table_headers.date }} | {{ i18n.syllabus.table_headers.title }} | {{ i18n.syllabus.table_headers.status }} |
+|---|------|-------|--------|
+{% for module in modules %}| {{ loop.index }} | {{ module.date | default(i18n.syllabus.tbd) }} | {{ module.title }} | {{ module.status | default(course.defaults.status) }} |
+{% endfor %}
+
+## {{ i18n.syllabus.learning_objectives }}
+
+{% for module in modules %}
+### {{ module.title }}
+
+{% if module.learning_objectives is defined and module.learning_objectives %}
+{{ module.learning_objectives | trim }}
+{% else %}
+- TODO
+{% endif %}
+
+{% endfor %}

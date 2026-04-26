@@ -1,0 +1,105 @@
+---
+title: "{{ module.title }}"
+{% if module.subtitle is defined and module.subtitle %}subtitle: "{{ module.subtitle }}"
+{% endif %}date: "{{ module.date }}"
+{% if module.status is defined %}status: "{{ module.status }}"
+{% endif %}---
+
+## {% raw %}{{< fa circle-info >}}{% endraw %} {{ i18n.module_page.overview }}
+
+{{ module.description | default("TODO: Add module description.") | trim }}
+
+## {% raw %}{{< fa bullseye >}}{% endraw %} {{ i18n.module_page.learning_objectives }}
+
+{% if module.learning_objectives is defined and module.learning_objectives %}
+{{ module.learning_objectives | trim }}
+{% else %}
+- TODO: Add learning objectives
+{% endif %}
+
+{% set slides_list = module.artifacts | default([]) | of_type("slides") | enabled %}
+{% if slides_list %}
+{% set slides = slides_list | first %}
+{% set slides_name = slides.file | basename | replace('.qmd', '') %}
+{% if slides.status in ('published', 'archived') %}
+
+## {% raw %}{{< fa display >}}{% endraw %} {{ i18n.module_page.slides }}
+
+{% if 'revealjs' in (slides.output_formats | default([])) %} [Slides in full screen](../slides/{{ slides_name }}.html){target="_blank"} {% endif %} {% if 'beamer' in (slides.output_formats | default([])) or 'pdf' in (slides.output_formats | default([])) %} | [Slides as PDF](../slides/{{ slides_name }}.pdf){target="_blank"} {% endif %}
+
+{% if 'revealjs' in (slides.output_formats | default([])) %}
+```{=html}
+<iframe class="slide-deck" src="../slides/{{ slides_name }}.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+{% endif %}
+
+{% else %}
+
+## {% raw %}{{< fa display >}}{% endraw %} {{ i18n.module_page.slides }} 
+
+🚧 {{ i18n.module_page.coming_soon }}
+
+<!--
+## {% raw %}{{< fa display >}}{% endraw %} {{ i18n.module_page.slides }}
+
+{% if 'revealjs' in (slides.output_formats | default([])) %} [Slides in full screen](../slides/{{ slides_name }}.html){target="_blank"} {% endif %} {% if 'beamer' in (slides.output_formats | default([])) or 'pdf' in (slides.output_formats | default([])) %} | [Slides as PDF](../slides/{{ slides_name }}.pdf){target="_blank"} {% endif %}
+
+{% if 'revealjs' in (slides.output_formats | default([])) %}
+```{=html}
+<iframe class="slide-deck" src="../slides/{{ slides_name }}.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+{% endif %}
+-->
+
+{% endif %}
+{% endif %} {# end slides #}
+
+{% set handout_list = module.artifacts | default([]) | of_type("handout") | enabled %}
+{% if handout_list %}
+{% set handout = handout_list | first %}
+{% set handout_name = handout.file | basename | replace('.qmd', '') %}
+{% if handout.status in ('published', 'archived') %}
+
+## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }}
+
+{% if 'pdf' in (handout.output_formats | default([])) %} [Handout as PDF](../handouts/{{ handout_name }}.pdf){target="_blank"} {% endif %}
+
+{% else %}
+
+## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }} 
+
+🚧 {{ i18n.module_page.coming_soon }}
+
+<!--
+## {% raw %}{{< fa file-lines >}}{% endraw %} {{ i18n.module_page.handout }}
+
+{% if 'pdf' in (handout.output_formats | default([])) %} [Handout as PDF](../handouts/{{ handout_name }}.pdf){target="_blank"} {% endif %}
+-->
+
+{% endif %}
+{% endif %} {# end handout #}
+
+
+## {{ i18n.module_page.content }}
+
+TODO: Add content.
+
+{% set enabled_artifacts = module.artifacts | default([]) | enabled %}
+{% if enabled_artifacts %}
+## {{ i18n.module_page.materials }}
+
+{% for artifact in enabled_artifacts %}
+{% set art_base = "../" + artifact.file | replace('content/', '', 1) | replace('.qmd', '') %}
+{% set fmts = artifact.output_formats | default([]) %}
+{% set has_html = 'website' in fmts or 'revealjs' in fmts %}
+{% set has_pdf = 'pdf' in fmts or 'beamer' in fmts %}
+{% if artifact.status in ('published', 'archived') %}
+- **{{ i18n.artifact_labels[artifact.type] | default(artifact.type | default(artifact.id) | capitalize) }}**:{% if has_html %} [{{ module.title }}]({{ art_base }}.html){% else %} {{ module.title }}{% endif %}{% if has_pdf %} | [{% raw %}{{< fa file-pdf >}}{% endraw %}]({{ art_base }}.pdf){% endif %}
+{% else %}
+- **{{ i18n.artifact_labels[artifact.type] | default(artifact.type | default(artifact.id) | capitalize) }}** 🚧: {{ i18n.module_page.coming_soon }}
+<!-- - **{{ i18n.artifact_labels[artifact.type] | default(artifact.type | default(artifact.id) | capitalize) }}**:{% if has_html %} [{{ module.title }}]({{ art_base }}.html){% else %} {{ module.title }}{% endif %}{% if has_pdf %} | [{% raw %}{{< fa file-pdf >}}{% endraw %}]({{ art_base }}.pdf){% endif %} -->
+{% endif %}
+
+{% endfor %}
+{% endif %}
+

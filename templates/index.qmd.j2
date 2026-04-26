@@ -1,0 +1,45 @@
+---
+title: "{{ course.title }}"
+{% if course.subtitle is defined and course.subtitle %}subtitle: "{{ course.subtitle }}"
+{% endif %}
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+---
+
+## {{ i18n.index.welcome }}
+
+TODO: Add a short description or welcome message for the course.
+
+## {{ i18n.index.course_information }}
+
+| | |
+|---|---|
+| **{{ i18n.index.labels.semester }}** | {{ course.semester }} |
+| **{{ i18n.index.labels.ects }}** | {{ course.ects }} |
+| **{{ i18n.index.labels.language }}** | {{ course.language | upper }} |
+| **{{ i18n.index.labels.institution }}** | {{ course.organization.institution }} |
+| **{{ i18n.index.labels.department }}** | {{ course.organization.department }} |
+
+## {{ i18n.index.instructors }}
+
+{% for inst in course.instructors %}
+- **{{ inst.name }}**{% if inst.role is defined %} ({{ inst.role }}){% endif %}{% if inst.email is defined %} · {{ inst.email }}{% endif %}
+
+{% endfor %}
+
+## {{ i18n.index.schedule }}
+
+- **{{ i18n.index.labels.start }}:** {{ course.schedule.start_date }}
+- **{{ i18n.index.labels.end }}:** {{ course.schedule.end_date }}
+- **{{ i18n.index.labels.weekly_day }}:** {{ course.schedule.weekly_day }}
+
+## {{ i18n.index.modules }}
+
+{% for module in modules %}
+- [{{ module.title }}](content/modules/{{ module.id }}.qmd){% if module.subtitle is defined and module.subtitle %} — {{ module.subtitle }}{% endif %}
+
+{% endfor %}

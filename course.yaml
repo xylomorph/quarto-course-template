@@ -1,0 +1,77 @@
+course:
+  id: my-course
+  title: "My Course"
+  subtitle: "A subtitle for my course"
+  semester: "WS 2026"
+  language: "en"        # en | de — controls i18n strings in generated stubs
+  ects: 3
+
+  instructors:
+    - name: "Prof. Jane Smith"
+      email: "jane.smith@university.edu"
+      role: "lecturer"          # lecturer | tutor | coordinator
+
+  organization:
+    institution: "My University"
+    department: "Department of Something"
+
+  defaults:
+    status: planned        # planned | draft | review | published | archived
+    visibility: public     # public | internal | hidden
+    duration: 90           # minutes
+
+  schedule:
+    start_date: 2026-10-01
+    end_date: 2027-01-31
+    weekly_day: "Monday"
+
+# Course-level artifacts (e.g. syllabus, a course overview deck)
+artifacts:
+  - id: syllabus
+    type: syllabus
+    enabled: true
+    file: "content/syllabus.qmd"
+
+modules:
+  - id: intro
+    type: lecture
+    title: "Introduction"
+    subtitle: "Getting started"
+    description: >
+      Overview of the course and its topics.
+    date: 2026-10-01
+    status: planned
+    visibility: public
+
+    learning_objectives: |
+      - Understand the scope of the course
+      - Know the assessment format
+
+    artifacts:
+      - id: intro-slides
+        type: slides
+        enabled: true
+        output_formats: [revealjs, beamer]
+      - id: intro-handout
+        type: handout
+        enabled: true
+        output_formats: [website, pdf]
+
+    lms:
+      release: null
+      due: null
+
+    dependencies: []
+
+  # Add more modules below. Each module can have slides, handouts, notes,
+  # and assignments. Set enabled: false to skip stub generation.
+  #
+  # - id: topic-a
+  #   type: lecture
+  #   title: "Topic A"
+  #   date: 2026-10-08
+  #   artifacts:
+  #     - id: topic-a-slides
+  #       type: slides
+  #       enabled: true
+  #       output_formats: [revealjs]

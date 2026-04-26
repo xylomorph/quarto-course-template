@@ -1,0 +1,17 @@
+# AUTO-GENERATED — do not edit by hand.
+# Sub-project: assignments  (PDF + HTML)
+# Render with: quarto render content/assignments/   or: make assignments
+
+project:
+  type: default
+  output-dir: ../../docs/content/assignments
+
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+
+render:
+{% for f in files %}  - {{ f }}
+{% endfor %}

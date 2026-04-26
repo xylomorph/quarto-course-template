@@ -1,0 +1,44 @@
+# Hand-editable Quarto project config.
+# Generated once by tools/generate.py — will NOT be overwritten on subsequent runs.
+# Navigation is imported from _quarto-nav.yml (always regenerated from course.yaml).
+
+project:
+  type: website
+  output-dir: docs
+  render:
+  - "index.qmd"
+  - "content/**"
+  - "!content/slides/**"
+  # TODO: Make this dependent on infos from course.yaml
+lang: {{ course.language | default("en") }}
+
+# Import generated navigation — do not edit _quarto-nav.yml by hand.
+metadata-files:
+  - _quarto-nav.yml
+
+website:
+  title: "{{ course.title }}"
+  {% if course.subtitle is defined and course.subtitle %}description: "{{ course.subtitle }}"
+  {% endif %}favicon: ""
+
+  navbar:
+    background: primary
+    search: true
+
+  sidebar: false
+
+  page-footer:
+    left: "{{ course.semester }} · {{ course.organization.institution }}"
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+format:
+  html:
+    theme:
+      - flatly
+      - assets/styles/custom.scss
+    toc: true
+    toc-depth: 3
+
+execute:
+  freeze: auto

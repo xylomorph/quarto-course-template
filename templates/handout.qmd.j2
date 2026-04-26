@@ -1,0 +1,26 @@
+---
+title: "{{ module.title }}{% if module.subtitle is defined and module.subtitle %}: {{ module.subtitle }}{% endif %}"
+{% if module.date is defined %}date: "{{ module.date }}"
+{% endif %}format:
+{% if 'website' in (artifact.output_formats | default([])) %}  html: default
+{% endif %}  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+---
+
+## {{ i18n.handout.learning_objectives }}
+
+{% if module.learning_objectives is defined and module.learning_objectives %}
+{{ module.learning_objectives | trim }}
+{% else %}
+- TODO: Add learning objectives
+{% endif %}
+
+## {{ i18n.handout.content }}
+
+TODO: Add handout content.
+
+## {{ i18n.handout.exercises }}
+
+TODO: Add exercises.

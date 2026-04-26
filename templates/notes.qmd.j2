@@ -1,0 +1,22 @@
+---
+title: "{{ module.title }}{% if module.subtitle is defined and module.subtitle %}: {{ module.subtitle }}{% endif %}"
+{% if module.date is defined %}date: "{{ module.date }}"
+{% endif %}format:
+  html: default
+{% if 'pdf' in (artifact.output_formats | default([])) %}  pdf:
+    documentclass: article
+    papersize: a4
+{% endif %}
+---
+
+## {{ i18n.notes.notes }}
+
+TODO: Add lecture notes.
+
+## {{ i18n.notes.key_concepts }}
+
+TODO: Add key concepts.
+
+## {{ i18n.notes.references }}
+
+TODO: Add references.

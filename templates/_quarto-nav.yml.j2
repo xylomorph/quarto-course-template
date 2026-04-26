@@ -1,0 +1,34 @@
+# AUTO-GENERATED — do not edit by hand.
+# This file is owned by tools/generate.py and will be overwritten on each run.
+# Edit _quarto.yml to adjust project settings.
+
+website:
+    sidebar:
+      style: "docked"
+      collapse-level: 1
+      contents:
+        - text: "{{ i18n.nav.home }}"
+          href: index.qmd
+        - text: "{{ i18n.nav.syllabus }}"
+          href: content/syllabus.qmd
+        - text: "---"
+{% for module in modules %}
+{% set ns = namespace(web_arts=[]) %}
+{% for a in module.artifacts | default([]) | enabled %}{% if 'website' in (a.output_formats | default([])) %}{% set ns.web_arts = ns.web_arts + [a] %}{% endif %}{% endfor %}
+{% if ns.web_arts %}        - section: "{{ module.title }}"
+          href: content/modules/{{ module.id }}.qmd
+          contents:
+{% for a in ns.web_arts %}            - text: "{{ i18n.artifact_labels[a.type] | default(a.type | capitalize) }}"
+              href: {{ a.file }}
+{% endfor %}
+{% else %}        - text: "{{ module.title }}"
+          href: content/modules/{{ module.id }}.qmd
+{% endif %}
+{% endfor %}
+{% set ns2 = namespace(course_web=[]) %}
+{% for a in course_artifacts | default([]) | enabled %}{% if 'website' in (a.output_formats | default([])) and a.type != 'syllabus' %}{% set ns2.course_web = ns2.course_web + [a] %}{% endif %}{% endfor %}
+{% if ns2.course_web %}        - section: "{{ i18n.nav.materials }}"
+          contents:
+{% for a in ns2.course_web %}            - text: "{{ i18n.artifact_labels[a.type] | default(a.id | default(a.type) | capitalize) }}"
+              href: {{ a.file }}
+{% endfor %}{% endif %}
