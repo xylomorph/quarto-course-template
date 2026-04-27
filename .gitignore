@@ -4,7 +4,7 @@
 # Quarto caches
 .quarto/
 *_cache/
-*_files/
+# *_files/ — kept so that revealjs and other _files assets are deployed to GitHub Pages
 # Quarto extension
 _extensions/
 
