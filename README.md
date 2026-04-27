@@ -231,6 +231,8 @@ Add a `.bib` file to `assets/` and reference it in each document's YAML frontmat
 bibliography: ../../assets/references.bib
 ```
 
+🚧 TODO: currently a `bibliography.bib` is placed in the root dir and referenced in the example content.
+
 ### Language
 
 Set `language:` in `course.yaml` (`en` or `de`). The generator picks i18n strings from `lang/en.yaml` or `lang/de.yaml` for section headings in generated stubs.
