@@ -1,5 +1,14 @@
 # quarto-course-template
 
+<div align="center">
+  <p align="center">
+  🔗 <a href="https://sebastiancacean.de/quarto-course-template">Generated Course Website (Illustration)</a>
+  ⚙️ <a href="https://github.com/xylomorph/quarto-coursegen">Quarto Course Generator</a>
+ </p>
+</div>
+<br/>
+
+
 A GitHub repository template for building Quarto-based course websites with strong support for [Argdown](https://argdown.org/) argument mapping and visualization.
 
 Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen) scaffolding generator.
