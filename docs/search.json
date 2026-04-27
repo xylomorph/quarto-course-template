@@ -1,0 +1,518 @@
+[
+  {
+    "objectID": "content/syllabus.html",
+    "href": "content/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "My Course: A subtitle for my course",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "content/syllabus.html#course-information",
+    "href": "content/syllabus.html#course-information",
+    "title": "Syllabus",
+    "section": "Course Information",
+    "text": "Course Information\n\n\n\nCourse\nMy Course\n\n\nSubtitle\nA subtitle for my course\n\n\nSemester\nWS 2026\n\n\nECTS\n3\n\n\nLanguage\nEN\n\n\nInstitution\nMy University\n\n\nDepartment\nDepartment of Something",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "content/syllabus.html#instructors",
+    "href": "content/syllabus.html#instructors",
+    "title": "Syllabus",
+    "section": "Instructors",
+    "text": "Instructors\n\nProf. Jane Smith (lecturer) — jane.smith@university.edu",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "content/syllabus.html#schedule",
+    "href": "content/syllabus.html#schedule",
+    "title": "Syllabus",
+    "section": "Schedule",
+    "text": "Schedule\n\nStart: 2026-10-01\nEnd: 2027-01-31\nWeekly day: Monday",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "content/syllabus.html#modules",
+    "href": "content/syllabus.html#modules",
+    "title": "Syllabus",
+    "section": "Modules",
+    "text": "Modules\n\n\n\n#\nDate\nTitle\n\n\n\n\n1\n06.10.2026\nGetting started\n\n\n2\n13.10.2026\nCore concepts\n\n\n3\n20.10.2026\nHands-on exercises",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "content/assignments/topic-a-assignment.html#instructions",
+    "href": "content/assignments/topic-a-assignment.html#instructions",
+    "title": "Topic A: Assignment",
+    "section": "Instructions",
+    "text": "Instructions\nThis assignment asks you to reconstruct and evaluate arguments about whether Pastafarianism qualifies as a religion. Answers to Tasks 1–3 should be submitted as an Argdown file (.ad). Task 4 requires a short written commentary (max. 300 words) in PDF or plain text.",
+    "crumbs": [
+      "Topic A",
+      "Assignment"
+    ]
+  },
+  {
+    "objectID": "content/assignments/topic-a-assignment.html#tasks",
+    "href": "content/assignments/topic-a-assignment.html#tasks",
+    "title": "Topic A: Assignment",
+    "section": "Tasks",
+    "text": "Tasks\n\nTask 1: Reconstruct an Argument\nReconstruct the following passage as a premise–conclusion argument in Argdown notation. Identify at least two premises and a conclusion, and give the argument a meaningful name.\n\n“Courts should not grant religious exemptions to Pastafarians. Pastafarianism was explicitly designed as a parody by its founder. A belief system created as parody cannot be the object of sincere religious belief. And without sincere belief, there is no religion — and without religion, there can be no religious exemption.”\n\n\n\nTask 2: Formulate an Objection\nWhich premise of the argument from Task 1 is most vulnerable to objection? Formulate a counter-argument in Argdown notation and connect it to the appropriate premise using an attack relation (-).\n\n\nTask 3: Dialectical Map\nUsing argdown-map notation, produce a dialectical map that includes:\n\nThe argument from Task 1\nYour counter-argument from Task 2\nAt least one additional statement node (supporting or being attacked)\n\n\n\nTask 4 (optional): Case Study\nLocate a real court ruling or administrative decision in which a Pastafarian claimed a religious exemption in any country. Briefly answer:\n\nWhat legal right was claimed?\nWhat did the court/authority decide?\nWhich premise of the argument from Task 1 does the court’s reasoning most directly support or undermine?\n\nCite your source using Quarto’s citation syntax: [@key] for a bibliography entry, or a full reference if the source is not in the course bibliography.",
+    "crumbs": [
+      "Topic A",
+      "Assignment"
+    ]
+  },
+  {
+    "objectID": "content/assignments/topic-a-assignment.html#submission",
+    "href": "content/assignments/topic-a-assignment.html#submission",
+    "title": "Topic A: Assignment",
+    "section": "Submission",
+    "text": "Submission\nSubmit your Argdown file and the Task 4 commentary (if attempted) via the course platform by 2026-10-20. File naming: [matriculation-number]-topic-a.ad and [matriculation-number]-topic-a-commentary.pdf.",
+    "crumbs": [
+      "Topic A",
+      "Assignment"
+    ]
+  },
+  {
+    "objectID": "content/handouts/topic-b-handout.html#learning-objectives",
+    "href": "content/handouts/topic-b-handout.html#learning-objectives",
+    "title": "Topic B — Practice Session: Hands-on exercises",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSolve applied problems using the methods from Topic A\nReflect on limitations and open questions",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/topic-b-handout.html#content",
+    "href": "content/handouts/topic-b-handout.html#content",
+    "title": "Topic B — Practice Session: Hands-on exercises",
+    "section": "Content",
+    "text": "Content\nTODO: Add handout content.",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/topic-b-handout.html#exercises",
+    "href": "content/handouts/topic-b-handout.html#exercises",
+    "title": "Topic B — Practice Session: Hands-on exercises",
+    "section": "Exercises",
+    "text": "Exercises\nTODO: Add exercises.",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/intro-handout.html#learning-objectives",
+    "href": "content/handouts/intro-handout.html#learning-objectives",
+    "title": "Introduction: Getting started",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nUnderstand the scope and goals of the course\nKnow the assessment format and grading criteria",
+    "crumbs": [
+      "Introduction",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/intro-handout.html#content",
+    "href": "content/handouts/intro-handout.html#content",
+    "title": "Introduction: Getting started",
+    "section": "Content",
+    "text": "Content\n\nWhat is Pastafarianism?\nThe Church of the Flying Spaghetti Monster (FSM) was founded in 2005 by Bobby Henderson, a physics graduate from Oregon State University. Henderson’s founding document was an open letter to the Kansas State Board of Education, which had recently voted to allow intelligent design alongside evolutionary theory in public school science classes. In the letter, Henderson demanded equal class time for his own supernatural creation theory: that the universe was created by an omnipotent deity made of spaghetti and meatballs (Cho 2023).\nThe letter went viral. In 2006, Henderson published The Gospel of the Flying Spaghetti Monster, which codified the movement’s doctrine. Followers are known as Pastafarians — a portmanteau of pasta and Rastafarianism.\n\n\nCore Tenets\n\n\n\n\n\n\n\nTenet\nContent\n\n\n\n\nCreator\nThe FSM created the universe “while quite drunk,” touching the Earth with his noodly appendage\n\n\nScripture\nThe Gospel of the Flying Spaghetti Monster (Henderson, 2006)\n\n\nHistory\nThe FSM deliberately hides evidence of creation to test the faith of believers\n\n\nHoly figures\nPirates are the original Pastafarians; the decline of piracy causes global warming\n\n\nMoral code\n“The Eight I’d Really Rather You Didn’ts”\n\n\nAfterlife\nHeaven, which contains a beer volcano and a stripper factory\n\n\nRitual dress\nA pasta colander worn on the head (used in official ID photos in several countries)\n\n\n\n\n\nOrigins and Context\nHenderson’s protest had an immediate effect: the Kansas Board reversed its ruling in 2006. The open letter, however, took on a life of its own. What began as targeted political argumentation became a movement with genuine adherents across multiple countries.\nThe question of whether those adherents hold their beliefs sincerely — and what follows from that — has become a live legal and philosophical issue. Courts in the United States, Germany, Austria, New Zealand, the Netherlands, and Italy have all considered Pastafarian claims (Palmisano and Ranzato 2025).\n\n\nHenderson’s Founding Argument\nThe logical structure of Henderson’s letter can be formalised as a premise–conclusion structure:\n[Equal time]: The Flying Spaghetti Monster theory deserves equal time\n              in public school science classes.\n\n&lt;Equality argument&gt;\n\n(1) If one supernatural creation theory receives time in public school science classes,\n    all other supernatural theories are equally entitled to time.\n(2) Intelligent design is a supernatural creation theory that received time\n    in Kansas public school science classes.\n----\n(3) [Equal time]\n\n\n\n\n\n\nNote\n\n\n\nNote on premise (1): Henderson treats this as a conditional applying to any supernatural theory. A natural objection is that premise (1) only holds if the theories are sufficiently similar in evidential status. This objection — and others — will be reconstructed in Session 2.",
+    "crumbs": [
+      "Introduction",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/intro-handout.html#exercises",
+    "href": "content/handouts/intro-handout.html#exercises",
+    "title": "Introduction: Getting started",
+    "section": "Exercises",
+    "text": "Exercises\n\nIdentify the premises. State the two premises of Henderson’s equality argument in your own words. Are both plausible? Explain briefly.\nChallenge a premise. Which premise is easier to attack? Formulate a one-sentence objection.\nReconstruct in Argdown. Using the Argdown notation from the session, reconstruct the following objection as a counter-argument to [Equal time]:\n\n“Intelligent design is not a scientific theory at all. It makes no testable predictions and therefore has no place in a science class, regardless of how many other theories do or do not.”\n\nResearch question. Find one example of a Pastafarian claiming a legal right (e.g. to wear a colander in an ID photo) in any country. Briefly describe the outcome.",
+    "crumbs": [
+      "Introduction",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#outline",
+    "href": "content/slides/intro-slides.html#outline",
+    "title": "Introduction: Getting started",
+    "section": "Outline",
+    "text": "Outline\n\nWhat is the Flying Spaghetti Monster?\nOrigins: Henderson’s 2005 open letter\nCore tenets of Pastafarianism\nA first argument reconstruction\nWhy it matters"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#what-is-the-flying-spaghetti-monster",
+    "href": "content/slides/intro-slides.html#what-is-the-flying-spaghetti-monster",
+    "title": "Introduction: Getting started",
+    "section": "What is the Flying Spaghetti Monster?",
+    "text": "What is the Flying Spaghetti Monster?\n\n2005: Bobby Henderson writes an open letter to the Kansas State Board of Education\nProposes that the universe was created by a Flying Spaghetti Monster (FSM)\nIf intelligent design gets science-class time, the FSM deserves equal time\nThe letter goes viral — the Church of the Flying Spaghetti Monster is born\nFollowers: Pastafarians (pasta + Rastafarianism)\n\n\n\n\n\n\n\nNote\n\n\n“I and many others around the world are of your belief in a Creator. We just choose a different view of that creator.” — Bobby Henderson, 2005"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#origins-the-kansas-controversy-2005",
+    "href": "content/slides/intro-slides.html#origins-the-kansas-controversy-2005",
+    "title": "Introduction: Getting started",
+    "section": "Origins: The Kansas Controversy (2005)",
+    "text": "Origins: The Kansas Controversy (2005)\nBackground:\n\nKansas Board of Education votes to allow intelligent design in science class alongside evolution\nReopens church–state separation debate in public education\n\nHenderson’s move:\n\nOpen letter demanding equal class time for FSM creationism (Cho 2023)\nCore claim: if one supernatural creation theory is in, all others must be too\nEffect: the Kansas Board reversed its decision in 2006"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#core-beliefs-of-pastafarianism",
+    "href": "content/slides/intro-slides.html#core-beliefs-of-pastafarianism",
+    "title": "Introduction: Getting started",
+    "section": "Core Beliefs of Pastafarianism",
+    "text": "Core Beliefs of Pastafarianism\n\n\n\nTenet\nContent\n\n\n\n\nCreator\nThe FSM created the universe “while quite drunk”\n\n\nUniverse age\n~5,000 years (evidence hidden to test faith)\n\n\nHoly figures\nPirates — the original Pastafarians\n\n\nMoral code\n“The Eight I’d Really Rather You Didn’ts”\n\n\nAfterlife\nBeer volcano and stripper factory\n\n\nClimate change\nCaused by the decline of piracy\n\n\nRitual dress\nColander worn on the head"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#hendersons-argument-source-view",
+    "href": "content/slides/intro-slides.html#hendersons-argument-source-view",
+    "title": "Introduction: Getting started",
+    "section": "Henderson’s Argument — Source View",
+    "text": "Henderson’s Argument — Source View\n[Equal time]: FSM creationism deserves equal time in public school science class.\n\n&lt;Equality argument&gt;\n\n(1) If one supernatural creation theory receives time in public school science classes,\n    all others deserve equal time.\n(2) Intelligent design received time in Kansas public school science classes.\n----\n(3) [Equal time]"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#hendersons-argument-map-view",
+    "href": "content/slides/intro-slides.html#hendersons-argument-map-view",
+    "title": "Introduction: Getting started",
+    "section": "Henderson’s Argument — Map View",
+    "text": "Henderson’s Argument — Map View\n[Equal time]: FSM creationism deserves equal time in public school science class.\n\n&lt;Equality argument&gt;\n\n(1) If one supernatural creation theory receives time in public school science classes,\n    all others deserve equal time.\n(2) Intelligent design received time in Kansas public school science classes.\n----\n(3) [Equal time]"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#why-it-matters",
+    "href": "content/slides/intro-slides.html#why-it-matters",
+    "title": "Introduction: Getting started",
+    "section": "Why It Matters",
+    "text": "Why It Matters\nPhilosophy of religion:\n\nWhat defines a religion? Belief? Ritual? Community? Cosmology?\nDoes a parodic origin disqualify a belief system from counting as a religion?\n\nLaw: (Martin 2020)\n\nCourts in the US, Germany, Austria, New Zealand, and Italy have decided Pastafarian cases\nIssues: military exemptions, oath ceremonies, ID photos with colander\nKey question: must beliefs be sincere to deserve legal protection?"
+  },
+  {
+    "objectID": "content/slides/intro-slides.html#summary",
+    "href": "content/slides/intro-slides.html#summary",
+    "title": "Introduction: Getting started",
+    "section": "Summary",
+    "text": "Summary\n\nPastafarianism originated as satirical protest against intelligent design in Kansas (2005)\nIt has grown into a movement raising genuine questions about the definition and legal status of religion\nThe core question: does a satirical origin disqualify a belief system from being a religion?\nNext session: reconstructing the “Is Pastafarianism a religion?” argument in detail\n\n\n\n\n\nCho, Hyun Jai (violet). 2023. “Tax Exemptions, Spaghetti, and the Devil: The Perils of Ambiguous Limitations on Religion and a Proposed Definition for Legally Acknowledged Systems of Faith.” Przegląd Konstytucyjny, no. 3: 61–82.\n\n\nMartin, Nick. 2020. “Exemptions, Sincerity and Pastafarianism.” Journal of Applied Philosophy 37 (2): 258–72. https://doi.org/10.1111/japp.12386."
+  },
+  {
+    "objectID": "content/modules/topic-a.html",
+    "href": "content/modules/topic-a.html",
+    "title": "Is Pastafarianism a Religion?",
+    "section": "",
+    "text": "The Sincere Belief Argument and the Parody Objection & Introduction to Argdown",
+    "crumbs": [
+      "Topic A"
+    ]
+  },
+  {
+    "objectID": "content/modules/topic-a.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "href": "content/modules/topic-a.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "title": "Is Pastafarianism a Religion?",
+    "section": " Overview",
+    "text": "Overview\nThis session examines the central question raised by Pastafarianism: is it a religion? We approach this not as a matter of personal opinion but as a logical and philosophical problem — and we use Argdown to make the argument structure explicit.\nThe question has legal stakes. Courts in multiple jurisdictions have had to decide whether Pastafarian claims deserve the same legal protection as those of established religions. Their reasoning turns on what counts as a religion and what makes religious belief sincere (Martin 2020).\n\nThe Three Arguments at a Glance\nThe session works through three connected arguments:\n[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.\n\n&lt;Sincere belief argument&gt;\n  + [FSM is a religion]\n\n&lt;Parody objection&gt;\n  - [FSM is a religion]\n\n&lt;Parody-sincerity response&gt;\n  - &lt;Parody objection&gt;\nKey concepts: sincere belief, functional vs. substantive definitions of religion, satirical origin, burden of proof.\nSlides in full screen | Slides as PDF",
+    "crumbs": [
+      "Topic A"
+    ]
+  },
+  {
+    "objectID": "content/modules/topic-a.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "href": "content/modules/topic-a.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "title": "Is Pastafarianism a Religion?",
+    "section": " Materials",
+    "text": "Materials\n\nSlides: Topic A | \nHandout: Topic A | \nAssignment: Topic A |",
+    "crumbs": [
+      "Topic A"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Course",
+    "section": "",
+    "text": "A subtitle for my course",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "My Course",
+    "section": "Welcome",
+    "text": "Welcome\nTODO: Add a short description or welcome message for the course.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-information",
+    "href": "index.html#course-information",
+    "title": "My Course",
+    "section": "Course Information",
+    "text": "Course Information\n\n\n\nSemester\nWS 2026\n\n\nECTS\n3\n\n\nLanguage\nEN\n\n\nInstitution\nMy University\n\n\nDepartment\nDepartment of Something",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "My Course",
+    "section": "Instructors",
+    "text": "Instructors\n\nProf. Jane Smith (lecturer) · jane.smith@university.edu",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "My Course",
+    "section": "Schedule",
+    "text": "Schedule\n\nStart: 2026-10-01\nEnd: 2027-01-31\nWeekly day: Monday",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "content/modules/intro.html",
+    "href": "content/modules/intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Pastafarianism and the question of religion",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "content/modules/intro.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "href": "content/modules/intro.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "title": "Introduction",
+    "section": " Overview",
+    "text": "Overview\nIn 2005, Bobby Henderson — a physics graduate from Oregon State University — sent an open letter to the Kansas State Board of Education. The Board had just voted to allow intelligent design alongside evolutionary theory in public school science classes. Henderson proposed that if one supernatural creation story got class time, so should another: the Flying Spaghetti Monster (FSM), a deity made of spaghetti and meatballs who created the universe “while quite drunk.”\nThe letter went viral. Henderson’s movement — Pastafarianism (a portmanteau of pasta and Rastafarianism) — grew into the Church of the Flying Spaghetti Monster. Its followers wear colanders as ritual headgear, revere pirates as holy figures, and attribute global warming to the decline of piracy.\nFor philosophers and legal scholars, Pastafarianism raises a serious question: if a belief system fulfils all standard criteria for religion — cosmology, scripture, ritual, community — does the satirical intent of its founder change anything?\n\nHenderson’s Founding Argument\n[Equal time]: FSM creationism deserves equal time in public school science class.\n\n&lt;Equality argument&gt;\n\n(1) If one supernatural creation theory receives time in public school science classes,\n    all others deserve equal time.\n(2) Intelligent design received time in Kansas public school science classes.\n----\n(3) [Equal time]\nKey concepts for this session: satirical religion, intelligent design, church–state separation, argument reconstruction.\nSlides in full screen | Slides as PDF",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "content/modules/intro.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "href": "content/modules/intro.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "title": "Introduction",
+    "section": " Materials",
+    "text": "Materials\n\nSlides: Introduction | \nHandout: Introduction | \nNotes: Introduction |",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "content/modules/topic-b.html",
+    "href": "content/modules/topic-b.html",
+    "title": "Topic B — Practice Session",
+    "section": "",
+    "text": "Hands-on exercises",
+    "crumbs": [
+      "Topic B — Practice Session"
+    ]
+  },
+  {
+    "objectID": "content/modules/topic-b.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "href": "content/modules/topic-b.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636972636c652d696e666f203e7d7d-overview",
+    "title": "Topic B — Practice Session",
+    "section": " Overview",
+    "text": "Overview\nGuided practice applying the concepts from Topic A to real-world examples.",
+    "crumbs": [
+      "Topic B — Practice Session"
+    ]
+  },
+  {
+    "objectID": "content/modules/topic-b.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "href": "content/modules/topic-b.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120666f6c6465722d6f70656e203e7d7d-materials",
+    "title": "Topic B — Practice Session",
+    "section": " Materials",
+    "text": "Materials\n\nHandout 🚧: In preparation … \nAssignment 🚧: In preparation …",
+    "crumbs": [
+      "Topic B — Practice Session"
+    ]
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#what-is-argdown-the-word-analogy",
+    "href": "content/slides/topic-a-slides.html#what-is-argdown-the-word-analogy",
+    "title": "Argdown",
+    "section": "What is Argdown? The Word Analogy",
+    "text": "What is Argdown? The Word Analogy\n\n\n\n\n\n\n\n\n\nText world\nArgument map world\n\n\n\n\nFormat/Syntax\nDocx format for texts\nArgdown format for argument maps\n\n\nArtefacts/Products\nWritten text\nArgument map / dialectical structure\n\n\nTools to create/edit/export the artefacts\nWord, LibreOffice\nVS Code + Argdown Extension, Editor, Argdown Sandbox, Argdown CLI"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#comparison-of-argdown-tools",
+    "href": "content/slides/topic-a-slides.html#comparison-of-argdown-tools",
+    "title": "Argdown",
+    "section": "Comparison of Argdown Tools",
+    "text": "Comparison of Argdown Tools\n\nVSCode + Argdown Extension\n\nCollaboration via Live Share Extension. (Also useful for live reconstructions and collaborative exercises with students.)\n\nVS Code Web:\n\nExtensions can be installed “permanently”. (https://code.visualstudio.com/docs/setup/vscode-web#_extensions)\nOpening local folders: not supported in Firefox (but works in Chrome and Edge) (https://code.visualstudio.com/docs/setup/vscode-web#_file-system-api)\n\nArgdown Sandbox: Runs directly in the browser.\n\nSave and load only via copy & paste.\n\nArgdown CLI\n\nCommand-line tool: export to many formats (besides image files: json, graphml, dot, html)"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#summary",
+    "href": "content/slides/topic-a-slides.html#summary",
+    "title": "Argdown",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\nSandbox\nVSCode\nVSCode Web\nArgdown CLI\n\n\n\n\nSyntax Highlighting\n✅\n✅\n✅\n➖\n\n\nInstallation\n🤩\n🙁\n🙂\n😢\n\n\nCollaboration\n❌\n☑️\n☑️\n➖\n\n\nCode Completion\n❌\n✅1\n✅2\n➖\n\n\n\nLegend:\n✅: Included automatically\n☑️: Possible in principle (but requires additional software)\n❌: Not available\n➖: Category not applicable\nNot inside Argdown code blocksNot inside Argdown code blocks"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#graph-layout",
+    "href": "content/slides/topic-a-slides.html#graph-layout",
+    "title": "Argdown",
+    "section": "Graph Layout",
+    "text": "Graph Layout\n👉 Argument maps use layout algorithms to position nodes and edges.\nOptions for manual layout adjustments:\n\nManual layout:\n\nExport to graphml and edit in other programs (e.g. yEd).\nExport to dot and use all customisation options of Graphviz.\n\nWithin Argdown:\n\nSet Graphviz settings: https://argdown.org/guide/changing-the-graph-layout.html#layouting-with-viz-js"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#representing-dialectical-structures",
+    "href": "content/slides/topic-a-slides.html#representing-dialectical-structures",
+    "title": "Argdown",
+    "section": "Representing Dialectical Structures",
+    "text": "Representing Dialectical Structures\n===\nselection:\n    excludeDisconnected: false\n===\n\n&lt;Argument with intermediate conclusions — one node&gt;\n\n(1) First premise\n(2) Second premise\n----\n(3) *Therefore:* Intermediate conclusion\n(4) One more premise.\n----\n(5) *Therefore:* Conclusion.\n\n\n\n\nArgument Map\n\n\nn0\n\nArgument with intermediate conclusions\n — one node\n\n\n\n\nBy default, disconnected nodes are not shown.1\nSee https://argdown.org/guide/creating-statement-and-argument-nodes.html#the-excludedisconnected-selection-setting"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#representing-dialectical-structures-1",
+    "href": "content/slides/topic-a-slides.html#representing-dialectical-structures-1",
+    "title": "Argdown",
+    "section": "Representing Dialectical Structures",
+    "text": "Representing Dialectical Structures\nIntermediate conclusion and final conclusion defined as independent statements.\n[IC]: The intermediate conclusion.\n\n[C]: The conclusion\n\n&lt;Argument with intermediate conclusions&gt;\n\n(1) First premise\n(2) Second premise\n----\n(3) [IC]\n(4) One more premise.\n----\n(5) [C]\n\n\n\n\nArgument Map\n\n\nn0\n\nC\nThe conclusion\n\n\n\nn1\n\nArgument with intermediate conclusions\n\n\n\nn1-&gt;n0"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#representing-dialectical-structures-2",
+    "href": "content/slides/topic-a-slides.html#representing-dialectical-structures-2",
+    "title": "Argdown",
+    "section": "Representing Dialectical Structures",
+    "text": "Representing Dialectical Structures\n\nIntermediate conclusion and final conclusion defined as independent statements.\nComplex argument split into two arguments to make the intermediate conclusion visible as a node.\n\n[IC]: The intermediate conclusion.\n\n[C]: The conclusion\n\n&lt;Argument Part 1&gt;\n\n(1) First premise\n(2) Second premise\n----\n(3) [IC]\n\n&lt;Argument Part 2&gt;\n\n(1) [IC]\n(2) One more premise.\n----\n(3) [C]\n\n\n\n\nArgument Map\n\n\nn0\n\nIC\nThe intermediate conclusion.\n\n\n\nn3\n\nArgument Part 2\n\n\n\nn0-&gt;n3\n\n\n\n\n\nn1\n\nC\nThe conclusion\n\n\n\nn2\n\nArgument Part 1\n\n\n\nn2-&gt;n0\n\n\n\n\n\nn3-&gt;n1"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#dialectical-structures-internal-structure-of-individual-arguments",
+    "href": "content/slides/topic-a-slides.html#dialectical-structures-internal-structure-of-individual-arguments",
+    "title": "Argdown",
+    "section": "Dialectical Structures: Internal Structure of Individual Arguments1",
+    "text": "Dialectical Structures: Internal Structure of Individual Arguments1\n===\nselection:\n  statementSelectionMode: all # adds all statements as nodes to the map\nmodel:\n  explodeArguments: true # adds argument nodes for each inferential step of each argument\nmap:\n  argumentLabelMode: none # no text in argument nodes\n  statementLabelMode: text # no titles in statement nodes\ndot:\n  argument:\n    shape: circle # argument nodes are in the shape of circles\n    minWidth: 0.2 # let's make those circles really small\n  graphVizSettings:\n    rankdir: TB # arrows flow from top to bottom (to produce a tree-like structure)\n===\n\n&lt;Argument with intermediate conclusions — one node&gt;\n\n(1) First premise\n(2) Second premise\n----\n(3) *Therefore:* Intermediate conclusion\n(4) One more premise.\n----\n(5) *Therefore:* Conclusion.\n\n\n\n\nArgument Map\n\n\nn0\n\nFirst premise\n\n\n\nn5\n\n\n\n\nn0-&gt;n5\n\n\n\n\n\nn1\n\nSecond premise\n\n\n\nn1-&gt;n5\n\n\n\n\n\nn2\n\nTherefore:\n  Intermediate conclusion\n\n\n\nn6\n\n\n\n\nn2-&gt;n6\n\n\n\n\n\nn3\n\nOne more premise.\n\n\n\nn3-&gt;n6\n\n\n\n\n\nn4\n\nTherefore:\n  Conclusion.\n\n\n\nn5-&gt;n2\n\n\n\n\n\nn6-&gt;n4\n\n\n\n\n\n\nSee https://argdown.org/guide/creating-oldschool-argument-maps-and-inference-trees.html#creating-oldschool-argument-maps-and-inference-trees"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#inference-patterns-logical-form-simple-representation",
+    "href": "content/slides/topic-a-slides.html#inference-patterns-logical-form-simple-representation",
+    "title": "Argdown",
+    "section": "Inference Patterns & Logical Form: Simple Representation",
+    "text": "Inference Patterns & Logical Form: Simple Representation\n(1) First premise\n    *Form: If p, then q.*\n(2) Second premise\n    *Form: p*\n-- from 1, 2, by Modus Ponens --\n(3) *Therefore:* Conclusion\n\n\n\n\n\nArgument Map"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#inference-patterns-logical-form-detailed-representation",
+    "href": "content/slides/topic-a-slides.html#inference-patterns-logical-form-detailed-representation",
+    "title": "Argdown",
+    "section": "Inference Patterns & Logical Form: Detailed Representation",
+    "text": "Inference Patterns & Logical Form: Detailed Representation\n(1) First premise\n    *Form: If p, then q.*\n    p: _what p stands for_\n    q: _what q stands for_\n(2) Second premise\n    *Form: p*\n-- \nfrom 1, 2, by Modus Ponens\n--\n(3) *Therefore:* Conclusion\n\n\n\n\n\nArgument Map"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#inference-patterns-logical-form-machine-readable-representation-jsonyaml",
+    "href": "content/slides/topic-a-slides.html#inference-patterns-logical-form-machine-readable-representation-jsonyaml",
+    "title": "Argdown",
+    "section": "Inference Patterns & Logical Form: Machine-Readable Representation (JSON/YAML)",
+    "text": "Inference Patterns & Logical Form: Machine-Readable Representation (JSON/YAML)\n(1) First premise {formalization: \"p -&gt; q\", declarations: {\"p\": \"what p stands for\", \"q\": \"what q stands for\"}}\n(2) Second premise {formalization: \"p\"}\n-- {from: [\"1\",\"2\"], logic: [\"modus ponens\"]} --\n(3) *Therefore:* Conclusion\n\n\n\n\n\nArgument Map\n\n\n\n👉 https://argdown.org/syntax/#statement-yaml-data"
+  },
+  {
+    "objectID": "content/slides/topic-a-slides.html#further-links",
+    "href": "content/slides/topic-a-slides.html#further-links",
+    "title": "Argdown",
+    "section": "Further Links",
+    "text": "Further Links\n\nArgdown configuration reference: https://argdown.org/guide/configuration-cheatsheet.html\nBlog post on the transition from Argunet to Argdown: http://www.argunet.org/2018/10/26/new-beginning-introducing-argdown/"
+  },
+  {
+    "objectID": "content/handouts/topic-a-handout.html#learning-objectives",
+    "href": "content/handouts/topic-a-handout.html#learning-objectives",
+    "title": "Topic A: Core concepts",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nExplain the fundamental concepts of Topic A\nApply the basic methods to simple examples",
+    "crumbs": [
+      "Topic A",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/topic-a-handout.html#content",
+    "href": "content/handouts/topic-a-handout.html#content",
+    "title": "Topic A: Core concepts",
+    "section": "Content",
+    "text": "Content\n\nWhat Makes Something a Religion?\nThere is no universally agreed definition of “religion” in philosophy, sociology, or law. Two broad approaches dominate the debate:\n\nSubstantive definitions focus on what a religion is: belief in supernatural entities, sacred texts, and a community of adherents.\nFunctional definitions focus on what a religion does: providing ultimate meaning, community, a moral framework, and ways of coping with finitude.\n\nPastafarianism satisfies many criteria on both approaches. Whether that is sufficient — given its explicitly parodic origin — is the central question of this session.\n\n\nThe Sincere Belief Argument\nMartin (2020) argues that the decisive criterion is sincerity: a belief system qualifies as a religion for legal purposes if its adherents sincerely hold its tenets and are prepared to bear real costs for those beliefs. On this view, the origin of the belief system (parodic or otherwise) is irrelevant; only the current attitude of the believer matters.\n[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.\n\n&lt;Sincere belief argument&gt;\n\n(1) A belief system constitutes a religion if its adherents sincerely hold its tenets\n    and are prepared to bear costs for those beliefs.\n(2) Some Pastafarians hold the tenets of Pastafarianism sincerely and have borne real\n    costs (legal disputes, official complaints, social censure) for their identity.\n----\n(3) [FSM is a religion]\n\n\nThe Parody Objection\nThe common objection to Pastafarian claims is that the movement’s explicitly satirical origin disqualifies it:\n&lt;Parody objection&gt;\n\n(1) A belief system deliberately designed as parody cannot be the object of sincere belief.\n(2) Pastafarianism was deliberately designed as parody by its founder.\n----\n(3) Pastafarianism cannot be sincerely held.\n(4) A belief system that cannot be sincerely held does not qualify as a religion.\n----\n(5) Pastafarianism does not qualify as a religion.\n\n[FSM is a religion]\n  - &lt;Parody objection&gt;\n\n\nThe Response: Sincerity Can Outlast Satirical Origin\nMartin (2020) argues in response that the parody objection conflates the founder’s intent with the adherents’ belief:\n&lt;Parody-sincerity response&gt;\n\n(1) A belief system may originate as satire yet be later adopted with genuine commitment\n    by adherents who were not its founders.\n(2) The sincerity criterion applies to current believers, not to the founder's intent.\n(3) Some current Pastafarians satisfy a behavioural sincerity test: consistent practice\n    and willingness to bear costs.\n----\n(4) The parodic origin of Pastafarianism does not establish that current adherents\n    cannot hold it sincerely.\n\n&lt;Parody objection&gt;\n  - &lt;Parody-sincerity response&gt;\n\n\nFull Dialectical Map\nAll three arguments in one view:\n\n\n\n\n\nArgument Map\n\n\nn0\n\nFSM is a religion\nPastafarianism qualifies as a religion\n for legal purposes.\n\n\n\nn1\n\nSincere belief argument\n\n\n\nn1-&gt;n0\n\n\n\n\n\nn2\n\nParody objection\n\n\n\nn2-&gt;n0\n\n\n\n\n\nn3\n\nParody-sincerity response\n\n\n\nn3-&gt;n2",
+    "crumbs": [
+      "Topic A",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/handouts/topic-a-handout.html#exercises",
+    "href": "content/handouts/topic-a-handout.html#exercises",
+    "title": "Topic A: Core concepts",
+    "section": "Exercises",
+    "text": "Exercises\n\nDiagram the structure. Identify which argument supports [FSM is a religion], which attacks it, and which attacks an attacker. Check your reading against the dialectical map above.\nEvaluate premise (1) of the parody objection. Is it plausible that a belief system designed as parody can never be sincerely held? Give a real-world example that either supports or undermines this premise.\nExtend the map. Add a further counter-argument to [FSM is a religion] that does not rely on the satirical origin. Reconstruct it in Argdown notation and indicate where it fits in the dialectical map.\nCompare definitions. Does the sincerity test count as a functional or a substantive definition of religion? Justify your answer in 3–5 sentences, citing Martin (2020).",
+    "crumbs": [
+      "Topic A",
+      "Handout"
+    ]
+  },
+  {
+    "objectID": "content/notes/intro-notes.html#notes",
+    "href": "content/notes/intro-notes.html#notes",
+    "title": "Introduction: Getting started",
+    "section": "Notes",
+    "text": "Notes\nTODO: Add lecture notes."
+  },
+  {
+    "objectID": "content/notes/intro-notes.html#key-concepts",
+    "href": "content/notes/intro-notes.html#key-concepts",
+    "title": "Introduction: Getting started",
+    "section": "Key Concepts",
+    "text": "Key Concepts\nTODO: Add key concepts."
+  },
+  {
+    "objectID": "content/notes/intro-notes.html#references",
+    "href": "content/notes/intro-notes.html#references",
+    "title": "Introduction: Getting started",
+    "section": "References",
+    "text": "References\nTODO: Add references."
+  },
+  {
+    "objectID": "content/assignments/topic-b-assignment.html#instructions",
+    "href": "content/assignments/topic-b-assignment.html#instructions",
+    "title": "Topic B — Practice Session: Assignment",
+    "section": "Instructions",
+    "text": "Instructions\nTODO: Describe the assignment task.",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Assignment"
+    ]
+  },
+  {
+    "objectID": "content/assignments/topic-b-assignment.html#tasks",
+    "href": "content/assignments/topic-b-assignment.html#tasks",
+    "title": "Topic B — Practice Session: Assignment",
+    "section": "Tasks",
+    "text": "Tasks\n\nTODO",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Assignment"
+    ]
+  },
+  {
+    "objectID": "content/assignments/topic-b-assignment.html#submission",
+    "href": "content/assignments/topic-b-assignment.html#submission",
+    "title": "Topic B — Practice Session: Assignment",
+    "section": "Submission",
+    "text": "Submission\nTODO: Add submission instructions.",
+    "crumbs": [
+      "Topic B — Practice Session",
+      "Assignment"
+    ]
+  }
+]
