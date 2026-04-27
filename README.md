@@ -44,7 +44,9 @@ Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen)
 ## Getting Started
 
 > [!NOTE]
-> There are two ways to customize this template to your needs: You can use the [`quarto-coursgen` CLI](https://github.com/xylomorph/quarto-coursegen) to generate stubs for Quarto files (Steps 6 & 7) or you can create and modify Quarto files without using the `quarto-coursgen` CLI. In this case, simply skip Step 6 and 7.
+> There are two ways to customize this template to your needs: You can use the [`quarto-coursgen` CLI](https://github.com/xylomorph/quarto-coursegen) to generate stubs for Quarto files (Steps 6 & 7) or you can create and modify Quarto files without using the `quarto-coursgen` CLI. In this case, simply skip Step 3, 6 and 7.
+
+
 
 ### 1. Create your course repo
 
@@ -58,7 +60,7 @@ The generated module pages use FontAwesome icons. Install the extension once in 
 quarto add quarto-ext/fontawesome
 ```
 
-### 3. Install Python dependencies
+### 3. Install Python dependencies (`quarto-coursegen`)
 
 ```bash
 # Using uv (recommended)
@@ -147,6 +149,8 @@ See [Argdown usage](#argdown-usage) below for details about using Argdown.
 
 ### 9. Render
 
+Local rendering:
+
 ```bash
 make website        # Quarto website (HTML)
 make slides         # Reveal.js slides
@@ -154,6 +158,10 @@ make slides-pdf     # Export slides to PDF via Decktape
 make handouts       # PDF handouts
 make all            # Everything
 ```
+
+🚧 Server-side rendering: 
+
+#TODO: Provide server-side rendering via Github workflow 
 
 
 ## Project Structure
@@ -289,7 +297,7 @@ If you don't use Argdown in a particular handout, the filter and settings are ha
 
 ### Argdown in Beamer slides
 
-Beamer (PDF) slides include `syntax-definitions` for argdown source block highlighting. However, `argdown-map` blocks with `mode: web-component` are silently dropped in PDF output. For Beamer documents that need argument maps, replace argdown-map blocks with equivalent images or use a separate handout artifact. (#TODO: There should be a better solution.)
+Beamer (PDF) slides include `syntax-definitions` for argdown source block highlighting. However, `argdown-map` blocks with `mode: web-component` are silently dropped in PDF output. For Beamer documents that need argument maps, replace argdown-map blocks with equivalent images or use a separate handout artifact. ( 🚧 #TODO: There should be a better solution.)
 
 
 ## Argdown Filter: Hints & Key Caveats
