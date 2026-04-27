@@ -1,0 +1,55 @@
+---
+title: "Syllabus"
+subtitle: "My Course: A subtitle for my course"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+    include-in-header: ../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../assets/latex/before-body.tex
+---
+
+## Course Information
+
+| | |
+|---|---|
+| **Course** | My Course |
+| **Subtitle** | A subtitle for my course |
+| **Semester** | WS 2026 |
+| **ECTS** | 3 |
+| **Language** | EN |
+| **Institution** | My University |
+| **Department** | Department of Something |
+
+## Instructors
+
+
+- **Prof. Jane Smith** (lecturer) — jane.smith@university.edu
+
+
+
+## Schedule
+
+- **Start:** 2026-10-01
+- **End:** 2027-01-31
+- **Weekly day:** Monday
+
+## Modules
+
+| # | Date | Title | 
+|---|------|-------|
+| 1 | 06.10.2026 | [Getting started](modules/intro.qmd) |
+| 2 | 13.10.2026 | [Core concepts](modules/topic-a.qmd) |
+| 3 | 20.10.2026 | [Hands-on exercises](modules/topic-b.qmd) |
+
+

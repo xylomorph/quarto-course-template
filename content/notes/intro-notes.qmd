@@ -1,0 +1,45 @@
+---
+title: "Introduction: Getting started"
+date: "2026-10-06"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
+  pdf:
+    documentclass: article
+    papersize: a4
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+filters:
+  - ../../node_modules/.bin/argdown-filter
+argdown:
+  mode: inline
+  format: svg
+  config: ../../argdown.config.json
+reference-section-title: "References"
+---
+
+## Notes
+
+TODO: Add lecture notes.
+
+## Key Concepts
+
+TODO: Add key concepts.
+
+## References
+
+TODO: Add references.

@@ -1,0 +1,52 @@
+# AUTO-GENERATED — do not edit by hand.
+# This file is owned by tools/generate.py and will be overwritten on each run.
+# Edit _quarto.yml to adjust project settings.
+
+website:
+    sidebar:
+      style: "docked"
+      collapse-level: 1
+      contents:
+        - text: "Home"
+          href: index.qmd
+        - text: "Syllabus"
+          href: content/syllabus.qmd
+        - text: "---"
+
+
+
+        - section: "Introduction"
+          href: content/modules/intro.qmd
+          contents:
+            - text: "Handout"
+              href: content/handouts/intro-handout.qmd
+
+
+
+
+
+        - section: "Topic A"
+          href: content/modules/topic-a.qmd
+          contents:
+            - text: "Handout"
+              href: content/handouts/topic-a-handout.qmd
+            - text: "Assignment"
+              href: content/assignments/topic-a-assignment.qmd
+
+
+
+
+
+        - section: "Topic B — Practice Session"
+          href: content/modules/topic-b.qmd
+          contents:
+            - text: "Handout"
+              href: content/handouts/topic-b-handout.qmd
+            - text: "Assignment"
+              href: content/assignments/topic-b-assignment.qmd
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+---
+title: "Introduction: Getting started"
+date: "2026-10-06"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+filters:
+  - ../../node_modules/.bin/argdown-filter
+argdown:
+  mode: inline
+  format: svg
+  config: ../../argdown.config.json
+reference-section-title: "References"
+bibliography: ../../bibliography.bib
+---
+
+## Learning Objectives
+
+
+- Understand the scope and goals of the course
+- Know the assessment format and grading criteria
+
+
+## Content
+
+### What is Pastafarianism?
+
+The **Church of the Flying Spaghetti Monster (FSM)** was founded in 2005 by Bobby Henderson, a physics graduate from Oregon State University. Henderson's founding document was an open letter to the Kansas State Board of Education, which had recently voted to allow *intelligent design* alongside evolutionary theory in public school science classes. In the letter, Henderson demanded equal class time for his own supernatural creation theory: that the universe was created by an omnipotent deity made of spaghetti and meatballs [@cho_tax_2023].
+
+The letter went viral. In 2006, Henderson published *The Gospel of the Flying Spaghetti Monster*, which codified the movement's doctrine. Followers are known as **Pastafarians** — a portmanteau of *pasta* and *Rastafarianism*.
+
+### Core Tenets
+
+| Tenet | Content |
+|-------|---------|
+| Creator | The FSM created the universe "while quite drunk," touching the Earth with his noodly appendage |
+| Scripture | *The Gospel of the Flying Spaghetti Monster* (Henderson, 2006) |
+| History | The FSM deliberately hides evidence of creation to test the faith of believers |
+| Holy figures | Pirates are the original Pastafarians; the decline of piracy causes global warming |
+| Moral code | "The Eight I'd Really Rather You Didn'ts" |
+| Afterlife | Heaven, which contains a beer volcano and a stripper factory |
+| Ritual dress | A pasta colander worn on the head (used in official ID photos in several countries) |
+
+### Origins and Context
+
+Henderson's protest had an immediate effect: the Kansas Board reversed its ruling in 2006. The open letter, however, took on a life of its own. What began as targeted political argumentation became a movement with genuine adherents across multiple countries.
+
+The question of whether those adherents hold their beliefs *sincerely* — and what follows from that — has become a live legal and philosophical issue. Courts in the United States, Germany, Austria, New Zealand, the Netherlands, and Italy have all considered Pastafarian claims [@palmisano_pastafarian_2025].
+
+### Henderson's Founding Argument
+
+The logical structure of Henderson's letter can be formalised as a premise–conclusion structure:
+
+```argdown
+===
+sourceHighlighter:
+    removeFrontMatter: true
+===
+
+[Equal time]: The Flying Spaghetti Monster theory deserves equal time
+              in public school science classes.
+
+<Equality argument>
+
+(1) If one supernatural creation theory receives time in public school science classes,
+    all other supernatural theories are equally entitled to time.
+(2) Intelligent design is a supernatural creation theory that received time
+    in Kansas public school science classes.
+----
+(3) [Equal time]
+```
+
+::: {.callout-note}
+**Note on premise (1):** Henderson treats this as a conditional applying to *any* supernatural theory. A natural objection is that premise (1) only holds if the theories are sufficiently similar in evidential status. This objection — and others — will be reconstructed in Session 2.
+:::
+
+## Exercises
+
+1. **Identify the premises.** State the two premises of Henderson's equality argument in your own words. Are both plausible? Explain briefly.
+
+2. **Challenge a premise.** Which premise is easier to attack? Formulate a one-sentence objection.
+
+3. **Reconstruct in Argdown.** Using the Argdown notation from the session, reconstruct the following objection as a counter-argument to `[Equal time]`:
+
+   > "Intelligent design is not a scientific theory at all. It makes no testable predictions and therefore has no place in a science class, regardless of how many other theories do or do not."
+
+4. **Research question.** Find one example of a Pastafarian claiming a legal right (e.g. to wear a colander in an ID photo) in any country. Briefly describe the outcome.

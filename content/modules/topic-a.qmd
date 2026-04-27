@@ -1,0 +1,96 @@
+---
+title: "Is Pastafarianism a Religion?"
+subtitle: "The Sincere Belief Argument and the Parody Objection & Introduction to Argdown"
+date: "2026-10-13"
+status: "published"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
+filters:
+  - ../../node_modules/.bin/argdown-filter
+bibliography: ../../bibliography.bib
+---
+
+## {{< fa circle-info >}} Overview
+
+This session examines the central question raised by Pastafarianism: **is it a religion?** We approach this not as a matter of personal opinion but as a logical and philosophical problem — and we use **Argdown** to make the argument structure explicit.
+
+The question has legal stakes. Courts in multiple jurisdictions have had to decide whether Pastafarian claims deserve the same legal protection as those of established religions. Their reasoning turns on what *counts as a religion* and what makes religious belief *sincere* [@martin_exemptions_2020].
+
+### The Three Arguments at a Glance
+
+The session works through three connected arguments:
+
+```argdown
+[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.
+
+<Sincere belief argument>
+  + [FSM is a religion]
+
+<Parody objection>
+  - [FSM is a religion]
+
+<Parody-sincerity response>
+  - <Parody objection>
+```
+
+**Key concepts:** sincere belief, functional vs. substantive definitions of religion, satirical origin, burden of proof.
+
+
+
+ [Slides in full screen](../slides/topic-a-slides.html){target="_blank"}   | [Slides as PDF](../slides/topic-a-slides.pdf){target="_blank"} 
+
+
+```{=html}
+<iframe class="slide-deck" src="../slides/topic-a-slides.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+
+
+
+ 
+
+
+
+
+## {{< fa folder-open >}} Materials
+
+
+
+
+
+
+
+- **Slides**: [Topic A](../slides/topic-a-slides.html) | [{{< fa file-pdf >}}](../slides/topic-a-slides.pdf)
+
+
+
+
+
+
+
+
+- **Handout**: [Topic A](../handouts/topic-a-handout.html) | [{{< fa file-pdf >}}](../handouts/topic-a-handout.pdf)
+
+
+
+
+
+
+
+
+- **Assignment**: [Topic A](../assignments/topic-a-assignment.html) | [{{< fa file-pdf >}}](../assignments/topic-a-assignment.pdf)
+
+
+
+
+

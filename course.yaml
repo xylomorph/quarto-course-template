@@ -39,40 +39,119 @@ modules:
     title: "Introduction"
     subtitle: "Getting started"
     description: >
-      Overview of the course and its topics.
-    date: 2026-10-01
-    status: planned
+      Overview of the course, its goals, and the assessment format.
+    date: 2026-10-06
+    status: published
     visibility: public
 
     learning_objectives: |
-      - Understand the scope of the course
-      - Know the assessment format
+      - Understand the scope and goals of the course
+      - Know the assessment format and grading criteria
 
     artifacts:
       - id: intro-slides
         type: slides
         enabled: true
+        status: published
         output_formats: [revealjs, beamer]
       - id: intro-handout
         type: handout
         enabled: true
+        status: published
         output_formats: [website, pdf]
+      - id: intro-notes
+        type: notes
+        enabled: true
+        status: published
+        output_formats: [pdf]
 
     lms:
-      release: null
+      release: 2026-10-01
       due: null
 
     dependencies: []
 
+  - id: topic-a
+    type: lecture
+    title: "Topic A"
+    subtitle: "Core concepts"
+    description: >
+      Introduction to the core concepts and methods of the field.
+    date: 2026-10-13
+    status: published
+    visibility: public
+
+    learning_objectives: |
+      - Explain the fundamental concepts of Topic A
+      - Apply the basic methods to simple examples
+
+    artifacts:
+      - id: topic-a-slides
+        type: slides
+        enabled: true
+        status: published
+        output_formats: [revealjs, beamer]
+      - id: topic-a-handout
+        type: handout
+        enabled: true
+        status: published
+        output_formats: [website, pdf]
+      - id: topic-a-assignment
+        type: assignment
+        enabled: true
+        status: published
+        output_formats: [website, pdf]
+
+    lms:
+      release: 2026-10-10
+      due: 2026-10-20
+
+    dependencies: [intro]
+
+  - id: topic-b
+    type: exercise
+    title: "Topic B — Practice Session"
+    subtitle: "Hands-on exercises"
+    description: >
+      Guided practice applying the concepts from Topic A to real-world examples.
+    date: 2026-10-20
+    status: planned
+    visibility: public
+
+    learning_objectives: |
+      - Solve applied problems using the methods from Topic A
+      - Reflect on limitations and open questions
+
+    artifacts:
+      - id: topic-b-slides
+        type: slides
+        enabled: false          # no slides for exercise sessions
+        output_formats: [revealjs]
+      - id: topic-b-handout
+        type: handout
+        enabled: true
+        output_formats: [website, pdf]
+      - id: topic-b-assignment
+        type: assignment
+        enabled: true
+        output_formats: [website, pdf]
+
+    lms:
+      release: 2026-10-17
+      due: 2026-10-27
+
+    dependencies: [intro, topic-a]
+
   # Add more modules below. Each module can have slides, handouts, notes,
-  # and assignments. Set enabled: false to skip stub generation.
+  # and assignments. Set enabled: false to skip stub generation for a
+  # specific artifact type.
   #
-  # - id: topic-a
+  # - id: topic-c
   #   type: lecture
-  #   title: "Topic A"
-  #   date: 2026-10-08
+  #   title: "Topic C"
+  #   date: 2026-10-27
   #   artifacts:
-  #     - id: topic-a-slides
+  #     - id: topic-c-slides
   #       type: slides
   #       enabled: true
   #       output_formats: [revealjs]

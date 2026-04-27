@@ -1,0 +1,50 @@
+# Hand-editable Quarto project config.
+# Generated once by tools/generate.py — will NOT be overwritten on subsequent runs.
+# Navigation is imported from _quarto-nav.yml (always regenerated from course.yaml).
+
+project:
+  type: website
+  output-dir: docs
+  render:
+  - "index.qmd"
+  - "content/**"
+  - "!content/slides/**"
+  # TODO: Make this dependent on infos from course.yaml
+lang: en
+
+# Import generated navigation — do not edit _quarto-nav.yml by hand.
+metadata-files:
+  - _quarto-nav.yml
+
+website:
+  title: "My Course"
+  description: "A subtitle for my course"
+  favicon: ""
+
+  navbar:
+    background: primary
+    search: true
+
+  sidebar: false
+
+  page-footer:
+    left: "WS 2026 · My University"
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+format:
+  html:
+    template-partials:
+      - assets/partials/title-block.html
+    theme:
+      - flatly
+      - assets/styles/custom.scss
+    toc: true
+    toc-depth: 3
+  pdf:
+    # Required for the LaTeX svg package to call Inkscape when converting
+    # inline SVG images produced by the argdown-filter (mode: inline, format: svg).
+    pdf-engine-opt: "-shell-escape"
+
+execute:
+  freeze: auto

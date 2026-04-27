@@ -1,0 +1,21 @@
+# AUTO-GENERATED — do not edit by hand.
+# Sub-project: slides  (reveal.js + Beamer)
+# Render with: quarto render content/slides/   or: make slides
+
+project:
+  type: default
+  output-dir: ../../docs/content/slides
+
+format:
+  revealjs:
+    theme: [default, ../../assets/styles/slides.scss]
+    slide-number: true
+    preview-links: auto
+  beamer:
+    theme: Madrid
+    colortheme: seahorse
+
+render:
+  - intro-slides.qmd
+  - topic-a-slides.qmd
+

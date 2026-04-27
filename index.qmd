@@ -1,0 +1,48 @@
+---
+title: "My Course"
+subtitle: "A subtitle for my course"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+    include-in-header: assets/latex/_handout-packages.tex
+    template-partials:
+      - assets/latex/before-body.tex
+---
+
+## Welcome
+
+TODO: Add a short description or welcome message for the course.
+
+## Course Information
+
+| | |
+|---|---|
+| **Semester** | WS 2026 |
+| **ECTS** | 3 |
+| **Language** | EN |
+| **Institution** | My University |
+| **Department** | Department of Something |
+
+## Instructors
+
+
+- **Prof. Jane Smith** (lecturer) · jane.smith@university.edu
+
+
+
+## Schedule
+
+- **Start:** 2026-10-01
+- **End:** 2027-01-31
+- **Weekly day:** Monday
+

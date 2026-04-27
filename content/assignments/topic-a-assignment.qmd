@@ -1,0 +1,60 @@
+---
+title: "Topic A: Assignment"
+date: "2026-10-13"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+due: "2026-10-20"
+reference-section-title: "References"
+bibliography: ../../bibliography.bib
+---
+
+## Instructions
+
+This assignment asks you to reconstruct and evaluate arguments about whether Pastafarianism qualifies as a religion. Answers to Tasks 1–3 should be submitted as an Argdown file (`.ad`). Task 4 requires a short written commentary (max. 300 words) in PDF or plain text.
+
+## Tasks
+
+### Task 1: Reconstruct an Argument
+
+Reconstruct the following passage as a premise–conclusion argument in Argdown notation. Identify at least two premises and a conclusion, and give the argument a meaningful name.
+
+> "Courts should not grant religious exemptions to Pastafarians. Pastafarianism was explicitly designed as a parody by its founder. A belief system created as parody cannot be the object of sincere religious belief. And without sincere belief, there is no religion — and without religion, there can be no religious exemption."
+
+### Task 2: Formulate an Objection
+
+Which premise of the argument from Task 1 is most vulnerable to objection? Formulate a counter-argument in Argdown notation and connect it to the appropriate premise using an attack relation (`-`).
+
+### Task 3: Dialectical Map
+
+Using `argdown-map` notation, produce a dialectical map that includes:
+
+- The argument from Task 1
+- Your counter-argument from Task 2
+- At least one additional statement node (supporting or being attacked)
+
+### Task 4 (optional): Case Study
+
+Locate a real court ruling or administrative decision in which a Pastafarian claimed a religious exemption in any country. Briefly answer:
+
+- What legal right was claimed?
+- What did the court/authority decide?
+- Which premise of the argument from Task 1 does the court's reasoning most directly support or undermine?
+
+Cite your source using Quarto's citation syntax: `[@key]` for a bibliography entry, or a full reference if the source is not in the course bibliography.
+
+## Submission
+
+Submit your Argdown file and the Task 4 commentary (if attempted) via the course platform by **2026-10-20**. File naming: `[matriculation-number]-topic-a.ad` and `[matriculation-number]-topic-a-commentary.pdf`.

@@ -1,0 +1,51 @@
+---
+title: "Topic B — Practice Session"
+subtitle: "Hands-on exercises"
+date: "2026-10-20"
+status: "planned"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+---
+
+## {{< fa circle-info >}} Overview
+
+Guided practice applying the concepts from Topic A to real-world examples.
+
+
+
+
+ 
+
+
+
+
+## {{< fa folder-open >}} Materials
+
+
+
+
+
+
+
+- **Handout** 🚧: In preparation ...
+<!-- - **Handout**: [Topic B — Practice Session](../handouts/topic-b-handout.html) | [{{< fa file-pdf >}}](../handouts/topic-b-handout.pdf) -->
+
+
+
+
+
+
+
+
+- **Assignment** 🚧: In preparation ...
+<!-- - **Assignment**: [Topic B — Practice Session](../assignments/topic-b-assignment.html) | [{{< fa file-pdf >}}](../assignments/topic-b-assignment.pdf) -->
+
+
+
+
+

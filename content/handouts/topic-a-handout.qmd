@@ -1,0 +1,177 @@
+---
+title: "Topic A: Core concepts"
+date: "2026-10-13"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
+  pdf:
+    documentclass: article
+    papersize: a4
+    toc: false
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+filters:
+  - ../../node_modules/.bin/argdown-filter
+argdown:
+  mode: inline
+  format: svg
+  config: ../../argdown.config.json
+reference-section-title: "References"
+bibliography: ../../bibliography.bib
+---
+
+## Learning Objectives
+
+
+- Explain the fundamental concepts of Topic A
+- Apply the basic methods to simple examples
+
+
+## Content
+
+### What Makes Something a Religion?
+
+There is no universally agreed definition of "religion" in philosophy, sociology, or law. Two broad approaches dominate the debate:
+
+- **Substantive definitions** focus on *what a religion is*: belief in supernatural entities, sacred texts, and a community of adherents.
+- **Functional definitions** focus on *what a religion does*: providing ultimate meaning, community, a moral framework, and ways of coping with finitude.
+
+Pastafarianism satisfies many criteria on both approaches. Whether that is sufficient — given its explicitly parodic origin — is the central question of this session.
+
+### The Sincere Belief Argument
+
+@martin_exemptions_2020 argues that the decisive criterion is **sincerity**: a belief system qualifies as a religion for legal purposes if its adherents sincerely hold its tenets and are prepared to bear real costs for those beliefs. On this view, the *origin* of the belief system (parodic or otherwise) is irrelevant; only the *current attitude* of the believer matters.
+
+```argdown
+===
+sourceHighlighter:
+    removeFrontMatter: true
+===
+
+[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.
+
+<Sincere belief argument>
+
+(1) A belief system constitutes a religion if its adherents sincerely hold its tenets
+    and are prepared to bear costs for those beliefs.
+(2) Some Pastafarians hold the tenets of Pastafarianism sincerely and have borne real
+    costs (legal disputes, official complaints, social censure) for their identity.
+----
+(3) [FSM is a religion]
+```
+
+### The Parody Objection
+
+The common objection to Pastafarian claims is that the movement's explicitly satirical origin disqualifies it:
+
+```argdown
+===
+sourceHighlighter:
+    removeFrontMatter: true
+===
+
+<Parody objection>
+
+(1) A belief system deliberately designed as parody cannot be the object of sincere belief.
+(2) Pastafarianism was deliberately designed as parody by its founder.
+----
+(3) Pastafarianism cannot be sincerely held.
+(4) A belief system that cannot be sincerely held does not qualify as a religion.
+----
+(5) Pastafarianism does not qualify as a religion.
+
+[FSM is a religion]
+  - <Parody objection>
+```
+
+### The Response: Sincerity Can Outlast Satirical Origin
+
+@martin_exemptions_2020 argues in response that the parody objection conflates the *founder's* intent with the *adherents'* belief:
+
+```argdown
+===
+sourceHighlighter:
+    removeFrontMatter: true
+===
+
+<Parody-sincerity response>
+
+(1) A belief system may originate as satire yet be later adopted with genuine commitment
+    by adherents who were not its founders.
+(2) The sincerity criterion applies to current believers, not to the founder's intent.
+(3) Some current Pastafarians satisfy a behavioural sincerity test: consistent practice
+    and willingness to bear costs.
+----
+(4) The parodic origin of Pastafarianism does not establish that current adherents
+    cannot hold it sincerely.
+
+<Parody objection>
+  - <Parody-sincerity response>
+```
+
+### Full Dialectical Map
+
+All three arguments in one view:
+
+```argdown-map
+===
+webComponent:
+    withoutHeader: false
+    views:
+        source: false
+        map: true
+===
+[FSM is a religion]: Pastafarianism qualifies as a religion for legal purposes.
+
+<Sincere belief argument>
+
+(1) A belief system constitutes a religion if its adherents sincerely hold its tenets
+    and bear costs for those beliefs.
+(2) Some Pastafarians hold the tenets sincerely and have borne costs for their identity.
+----
+(3) [FSM is a religion]
+
+<Parody objection>
+
+(1) A belief system designed as parody cannot be sincerely held.
+(2) Pastafarianism was designed as parody.
+----
+(3) Pastafarianism does not qualify as a religion.
+
+[FSM is a religion]
+  - <Parody objection>
+
+<Parody-sincerity response>
+
+(1) A belief system may originate as satire yet be adopted sincerely by later adherents.
+(2) The sincerity criterion applies to current believers, not to the founder's intent.
+----
+(3) Premise (1) of the parody objection is false.
+
+<Parody objection>
+  - <Parody-sincerity response>
+```
+
+## Exercises
+
+1. **Diagram the structure.** Identify which argument supports `[FSM is a religion]`, which attacks it, and which attacks an attacker. Check your reading against the dialectical map above.
+
+2. **Evaluate premise (1) of the parody objection.** Is it plausible that a belief system *designed as parody* can never be sincerely held? Give a real-world example that either supports or undermines this premise.
+
+3. **Extend the map.** Add a further counter-argument to `[FSM is a religion]` that does *not* rely on the satirical origin. Reconstruct it in Argdown notation and indicate where it fits in the dialectical map.
+
+4. **Compare definitions.** Does the sincerity test count as a functional or a substantive definition of religion? Justify your answer in 3–5 sentences, citing @martin_exemptions_2020.

@@ -1,0 +1,95 @@
+---
+title: "Introduction"
+subtitle: "Pastafarianism and the question of religion"
+date: "2026-10-06"
+status: "published"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html:
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: ../../argdown.config.json
+filters:
+  - ../../node_modules/.bin/argdown-filter
+bibliography: ../../bibliography.bib
+---
+
+## {{< fa circle-info >}} Overview
+
+In 2005, Bobby Henderson — a physics graduate from Oregon State University — sent an open letter to the Kansas State Board of Education. The Board had just voted to allow *intelligent design* alongside evolutionary theory in public school science classes. Henderson proposed that if one supernatural creation story got class time, so should another: the **Flying Spaghetti Monster (FSM)**, a deity made of spaghetti and meatballs who created the universe "while quite drunk."
+
+The letter went viral. Henderson's movement — **Pastafarianism** (a portmanteau of *pasta* and *Rastafarianism*) — grew into the **Church of the Flying Spaghetti Monster**. Its followers wear colanders as ritual headgear, revere pirates as holy figures, and attribute global warming to the decline of piracy.
+
+For philosophers and legal scholars, Pastafarianism raises a serious question: if a belief system fulfils all standard criteria for religion — cosmology, scripture, ritual, community — does the *satirical intent of its founder* change anything?
+
+### Henderson's Founding Argument
+
+```argdown
+[Equal time]: FSM creationism deserves equal time in public school science class.
+
+<Equality argument>
+
+(1) If one supernatural creation theory receives time in public school science classes,
+    all others deserve equal time.
+(2) Intelligent design received time in Kansas public school science classes.
+----
+(3) [Equal time]
+```
+
+**Key concepts for this session:** satirical religion, intelligent design, church–state separation, argument reconstruction.
+
+
+
+ [Slides in full screen](../slides/intro-slides.html){target="_blank"}   | [Slides as PDF](../slides/intro-slides.pdf){target="_blank"} 
+
+
+```{=html}
+<iframe class="slide-deck" src="../slides/intro-slides.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+
+
+
+ 
+
+
+
+
+## {{< fa folder-open >}} Materials
+
+
+
+
+
+
+
+- **Slides**: [Introduction](../slides/intro-slides.html) | [{{< fa file-pdf >}}](../slides/intro-slides.pdf)
+
+
+
+
+
+
+
+
+- **Handout**: [Introduction](../handouts/intro-handout.html) | [{{< fa file-pdf >}}](../handouts/intro-handout.pdf)
+
+
+
+
+
+
+
+
+- **Notes**: Introduction | [{{< fa file-pdf >}}](../notes/intro-notes.pdf)
+
+
+
+
+

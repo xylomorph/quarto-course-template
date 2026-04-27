@@ -1,0 +1,33 @@
+---
+title: "Topic B — Practice Session: Assignment"
+date: "2026-10-20"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  html: default
+  pdf:
+    documentclass: article
+    papersize: a4
+    include-in-header: ../../assets/latex/_handout-packages.tex
+    template-partials:
+      - ../../assets/latex/before-body.tex
+due: "2026-10-27"
+reference-section-title: "References"
+---
+
+## Instructions
+
+TODO: Describe the assignment task.
+
+## Tasks
+
+1. TODO
+
+## Submission
+
+TODO: Add submission instructions.

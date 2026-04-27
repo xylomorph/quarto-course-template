@@ -1,0 +1,138 @@
+---
+title: "Introduction: Getting started"
+date: "2026-10-06"
+author: "Prof. Jane Smith"
+organization: "My University"
+institute: "Institute of Something"
+email: "jane.smith@university.edu"
+course: "My Course"
+term: "WS 2026"
+lang: "en"
+format:
+  revealjs:
+    theme: [default, ../../assets/styles/slides.scss]
+    slide-number: true
+    # embed-resources: true (not compatible with argdown using web components)
+    preview-links: auto
+    pdfSeparateFragments: true
+    logo: ../../assets/images/logo.png
+    controls: true
+  beamer:
+    theme: Madrid
+    colortheme: seahorse
+    include-in-header: ../../assets/latex/_beamer-packages.tex
+    syntax-definitions:
+      - ../../assets/pandoc/argdown.xml
+    syntax-highlighting: ../../assets/pandoc/argdown.theme
+filters:
+  - ../../node_modules/.bin/argdown-filter
+argdown:
+  sourceHighlighter: web-component
+  mode: web-component
+  config: ../../argdown.config.json
+bibliography: ../../bibliography.bib
+---
+
+## Outline
+
+1. What is the Flying Spaghetti Monster?
+2. Origins: Henderson's 2005 open letter
+3. Core tenets of Pastafarianism
+4. A first argument reconstruction
+5. Why it matters
+
+## What is the Flying Spaghetti Monster?
+
+- 2005: Bobby Henderson writes an open letter to the Kansas State Board of Education
+- Proposes that the universe was created by a **Flying Spaghetti Monster (FSM)**
+- If *intelligent design* gets science-class time, the FSM deserves equal time
+- The letter goes viral — the **Church of the Flying Spaghetti Monster** is born
+- Followers: **Pastafarians** (*pasta* + *Rastafarianism*)
+
+::: {.callout-note}
+"I and many others around the world are of your belief in a Creator. We just choose a different view of that creator." — Bobby Henderson, 2005
+:::
+
+## Origins: The Kansas Controversy (2005)
+
+**Background:**
+
+- Kansas Board of Education votes to allow *intelligent design* in science class alongside evolution
+- Reopens church–state separation debate in public education
+
+**Henderson's move:**
+
+- Open letter demanding equal class time for FSM creationism [@cho_tax_2023]
+- Core claim: if one supernatural creation theory is in, all others must be too
+- Effect: the Kansas Board reversed its decision in 2006
+
+## Core Beliefs of Pastafarianism
+
+| Tenet | Content |
+|-------|---------|
+| Creator | The FSM created the universe "while quite drunk" |
+| Universe age | ~5,000 years (evidence hidden to test faith) |
+| Holy figures | Pirates — the original Pastafarians |
+| Moral code | "The Eight I'd Really Rather You Didn'ts" |
+| Afterlife | Beer volcano and stripper factory |
+| Climate change | Caused by the decline of piracy |
+| Ritual dress | Colander worn on the head |
+
+## Henderson's Argument — Source View
+
+```argdown
+===
+sourceHighlighter:
+    removeFrontMatter: true
+webComponent:
+    withoutHeader: true
+    views:
+        source: true
+        map: false
+===
+
+[Equal time]: FSM creationism deserves equal time in public school science class.
+
+<Equality argument>
+
+(1) If one supernatural creation theory receives time in public school science classes,
+    all others deserve equal time.
+(2) Intelligent design received time in Kansas public school science classes.
+----
+(3) [Equal time]
+```
+
+## Henderson's Argument — Map View
+
+```argdown-map
+[Equal time]: FSM creationism deserves equal time in public school science class.
+
+<Equality argument>
+
+(1) If one supernatural creation theory receives time in public school science classes,
+    all others deserve equal time.
+(2) Intelligent design received time in Kansas public school science classes.
+----
+(3) [Equal time]
+```
+
+## Why It Matters
+
+**Philosophy of religion:**
+
+- What *defines* a religion? Belief? Ritual? Community? Cosmology?
+- Does a *parodic* origin disqualify a belief system from counting as a religion?
+
+**Law:** [@martin_exemptions_2020]
+
+- Courts in the US, Germany, Austria, New Zealand, and Italy have decided Pastafarian cases
+- Issues: military exemptions, oath ceremonies, ID photos with colander
+- Key question: must beliefs be *sincere* to deserve legal protection?
+
+## Summary
+
+- Pastafarianism originated as satirical protest against intelligent design in Kansas (2005)
+- It has grown into a movement raising genuine questions about the definition and legal status of religion
+- The core question: **does a satirical origin disqualify a belief system from being a religion?**
+- Next session: reconstructing the "Is Pastafarianism a religion?" argument in detail
+
