@@ -35,11 +35,10 @@ jobs:
 
       - name: Install Node dependencies (Argdown)
         run: |
-          npm install -g decktape
-          npm install -g @argdown/cli
-          npm install -g @argdown/pandoc-filter
-          npm install -g @argdown/image-export
-          npm install
+          npm install decktape
+          npm install @argdown/cli
+          npm install @argdown/pandoc-filter
+          npm install @argdown/image-export
 
       - name: Install system dependencies
         run: |
