@@ -152,7 +152,7 @@ See [Argdown usage](#argdown-usage) below for details about using Argdown.
 
 ### 9. Render
 
-Local rendering:
+**Local rendering:**
 
 ```bash
 make website        # Quarto website (HTML)
@@ -162,9 +162,17 @@ make handouts       # PDF handouts
 make all            # Everything
 ```
 
-🚧 Server-side rendering: 
+**GitHub Pages deployment:**
 
-#TODO: Provide server-side rendering via Github workflow 
+A GitHub Actions workflow is included for automatic deployment. To enable:
+
+1. Push your repository to GitHub
+2. Go to **Settings** → **Pages** → set **Source** to "GitHub Actions"
+3. Push to `main` branch or manually trigger the workflow from the Actions tab
+
+See [`.github/workflows/README.md`](.github/workflows/README.md) for detailed setup instructions.
+
+Your site will be available at `https://<username>.github.io/<repository-name>/` 
 
 
 ## Project Structure
