@@ -5,6 +5,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - .nojekyll
   render:
   - "index.qmd"
   - "content/**"
