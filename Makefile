@@ -17,12 +17,7 @@ slides:
 	quarto render content/slides/
 
 # Export slides to PDF using Decktape (requires decktape installed globally).
-# Decktape requires a newer Node.js than @argdown (which needs <=20).
-# If you use nvm, set DECKTAPE_NODE to the version where decktape is installed:
-#   make slides-pdf DECKTAPE_NODE=lts/krypton
-DECKTAPE_NODE ?= lts/krypton
 slides-pdf: slides
-	. $(NVM_DIR)/nvm.sh && nvm use $(DECKTAPE_NODE) && \
 	for f in docs/content/slides/*.html; do \
 		decktape reveal "$$f" "$${f%.html}.pdf"; \
 	done

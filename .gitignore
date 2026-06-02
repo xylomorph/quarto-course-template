@@ -1,5 +1,6 @@
 # Quarto rendered output
 #docs/
+/misc/
 
 # Quarto caches
 .quarto/
@@ -16,6 +17,7 @@ __pycache__/
 # Node / npm
 node_modules/
 package-lock.json
+package.json
 
 # OS
 .DS_Store
@@ -23,3 +25,6 @@ Thumbs.db
 
 /.quarto/
 **/*.quarto_ipynb
+
+.github/agents/
+.github/instructions/

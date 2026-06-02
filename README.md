@@ -32,12 +32,10 @@ Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen)
 | [Quarto](https://quarto.org) ≥ 1.5 | Rendering | [quarto.org/docs/get-started](https://quarto.org/docs/get-started/) |
 | Python ≥ 3.11 | Generator CLI | system or [uv](https://docs.astral.sh/uv/) |
 | `quarto-coursegen` | Stub generator | `uv tool install quarto-coursegen` or `pip install quarto-coursegen` |
-| Node.js ≤ 20 | Argdown pandoc filter | `nvm install 20` |
+| Node | Argdown pandoc filter | e.g., `nvm install node` |
 | `@argdown/pandoc-filter` | Argdown rendering | `npm install` (see below) |
 | [Inkscape](https://inkscape.org) | SVG→PDF conversion for argdown maps in PDF | system package |
 | [Decktape](https://github.com/astefanutti/decktape) | Slide PDF export | `npm install -g decktape` (needs newer Node) |
-
-> **Node version note:** `@argdown/pandoc-filter` requires Node ≤ 20. Decktape works best with a newer LTS (e.g. `lts/krypton` / Node 24). If you use [nvm](https://github.com/nvm-sh/nvm), pin the project to Node 20 via the included `.nvmrc` and install Decktape globally under a newer version.
 
 ---
 
@@ -45,7 +43,6 @@ Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen)
 
 > [!NOTE]
 > There are two ways to customize this template to your needs: You can use the [`quarto-coursgen` CLI](https://github.com/xylomorph/quarto-coursegen) to generate stubs for Quarto files (Steps 6 & 7) or you can create and modify Quarto files without using the `quarto-coursgen` CLI. In this case, simply skip Step 3, 6 and 7.
-
 
 
 ### 1. Create your course repo
@@ -73,19 +70,25 @@ pip install quarto-coursegen
 
 ### 4. Install Node dependencies (Argdown)
 
-```bash
-nvm use        # switches to Node 20 (from .nvmrc)
-npm install    # installs @argdown/cli, @argdown/pandoc-filter, @argdown/image-export
-```
-
-Install Decktape globally under a newer Node version (for slide PDF export):
+Install node dependencies locally (under `./node_modules`):
 
 ```bash
-nvm install lts/krypton   # or your preferred newer LTS
-nvm use lts/krypton
-npm install -g decktape
-nvm use 20   # switch back for argdown work
+npm install -g decktape # for pdf output of slides
+npm install -g @argdown/cli
+npm install -g @argdown/pandoc-filter
+npm install -g @argdown/image-export
 ```
+
+> [!NOTE]
+> **Using globally installed Argdown**
+>
+> You can also install all node dependencies globally by using the `-g` flag. However, currently the Quarto files are configured to use a locally installed filter. The path
+> is specified in the respective YAML file headers. Additionally, Quarto might have problems to detect a globally installed Argdown filter. Hence, you might have to specify the 
+> full path to it or add a wrapper script.
+
+
+Alternatively, install locally (under `./node_modules`) by not using the `-g` flag.
+
 
 ### 5. Install system dependencies
 
@@ -288,24 +291,6 @@ sourceHighlighter:
 The `argdown.config.json` at the project root sets global defaults (no header, show source, hide map by default). Individual blocks can override these with inline `===...===` YAML front matter. (You can also remove the usage of these global settings via the YAML header of each `qmd` file.)
 
 > **`embed-resources` note:** Reveal.js web components require external scripts — `embed-resources: true` is incompatible with Argdown web-component mode.
-
-> [!WARNING]
-> **`@argdown/web-components` v2 CDN breaking change**
->
-> `@argdown/pandoc-filter@1.7.x` loads the web component from an **unpinned** jsDelivr CDN URL, so all rendered HTML automatically picks up the latest published version. When `@argdown/web-components@2.0.0` shipped, this silently broke web-component rendering: v2 is an ES module requiring `<script type="module">`, but the v1.7.x filter hardcodes `<script type="text/javascript">` — resulting in empty frames with only the control buttons visible (see [argdown issue #590](https://github.com/argdown/argdown/issues/590)).
->
-> **Workaround:** pin the CDN URLs explicitly in `argdown.config.json`:
->
-> ```json
-> {
->   "webComponent": {
->     "globalStylesUrl": "https://cdn.jsdelivr.net/npm/@argdown/web-components@1.7.12/dist/argdown-map.css",
->     "webComponentScriptUrl": "https://cdn.jsdelivr.net/npm/@argdown/web-components@1.7.12/dist/argdown-map.js"
->   }
-> }
-> ```
->
-> `globalStylesUrl` and `webComponentScriptUrl` override the hardcoded plugin defaults. This fix survives `npm install` and applies to all future renders. After updating the config, re-render existing documents to propagate the pinned URLs into already-generated HTML files.
 
 ### Handouts and Notes (PDF)
 
