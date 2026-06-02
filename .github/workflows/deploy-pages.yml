@@ -31,7 +31,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install Node dependencies (Argdown)
         run: |
@@ -64,6 +63,16 @@ jobs:
       - name: Render Quarto website
         run: |
           quarto render
+
+      - name: Render slides
+        run: |
+          quarto render content/slides/
+
+      - name: Export slides to PDF with Decktape
+        run: |
+          for f in docs/content/slides/*.html; do \
+            npx decktape reveal "$$f" "$${f%.html}.pdf"; \
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

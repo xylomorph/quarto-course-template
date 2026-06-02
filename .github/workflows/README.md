@@ -46,6 +46,8 @@ The workflow performs the following steps:
 
 3. **Build**
    - Renders the full Quarto website (`quarto render`)
+   - Renders slides separately (`quarto render content/slides/`)
+   - Exports slides to PDF using Decktape
    - Output directory: `docs/`
 
 4. **Deploy**

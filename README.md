@@ -183,7 +183,6 @@ Your site will be available at `https://<username>.github.io/<repository-name>/`
 ├── argdown.config.json       # Global Argdown defaults (auto-discovered by filter)
 ├── package.json              # Node dependencies (@argdown/*)
 ├── pyproject.toml            # Python dependency (quarto-coursegen)
-├── .nvmrc                    # Node version pin (20) for @argdown
 ├── Makefile                  # All build targets
 ├── assets/
 │   ├── images/               # Logo files (replace with your institution's logo)
