@@ -49,6 +49,7 @@ jobs:
             texlive-fonts-recommended \
             texlive-latex-recommended \
             texlive-luatex \
+            texlive-fonts-extra \
             librsvg2-bin
 
       - name: Setup Quarto
