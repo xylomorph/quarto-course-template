@@ -289,6 +289,24 @@ The `argdown.config.json` at the project root sets global defaults (no header, s
 
 > **`embed-resources` note:** Reveal.js web components require external scripts — `embed-resources: true` is incompatible with Argdown web-component mode.
 
+> [!WARNING]
+> **`@argdown/web-components` v2 CDN breaking change**
+>
+> `@argdown/pandoc-filter@1.7.x` loads the web component from an **unpinned** jsDelivr CDN URL, so all rendered HTML automatically picks up the latest published version. When `@argdown/web-components@2.0.0` shipped, this silently broke web-component rendering: v2 is an ES module requiring `<script type="module">`, but the v1.7.x filter hardcodes `<script type="text/javascript">` — resulting in empty frames with only the control buttons visible (see [argdown issue #590](https://github.com/argdown/argdown/issues/590)).
+>
+> **Workaround:** pin the CDN URLs explicitly in `argdown.config.json`:
+>
+> ```json
+> {
+>   "webComponent": {
+>     "globalStylesUrl": "https://cdn.jsdelivr.net/npm/@argdown/web-components@1.7.12/dist/argdown-map.css",
+>     "webComponentScriptUrl": "https://cdn.jsdelivr.net/npm/@argdown/web-components@1.7.12/dist/argdown-map.js"
+>   }
+> }
+> ```
+>
+> `globalStylesUrl` and `webComponentScriptUrl` override the hardcoded plugin defaults. This fix survives `npm install` and applies to all future renders. After updating the config, re-render existing documents to propagate the pinned URLs into already-generated HTML files.
+
 ### Handouts and Notes (PDF)
 
 Generated handout stubs are pre-configured for PDF output with:
