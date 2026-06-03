@@ -60,7 +60,7 @@ jobs:
             libxcomposite1 \
             libxdamage1 \
             libxrandr2 \
-            libasound2
+            libasound2t64
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
