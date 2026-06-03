@@ -34,7 +34,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install Node dependencies (Argdown)
         run: |
@@ -86,7 +86,10 @@ jobs:
       - name: Export slides to PDF with Decktape
         run: |
           for f in docs/content/slides/*.html; do \
-            npx decktape reveal "$$f" "$${f%.html}.pdf" --chrome-arg=--no-sandbox; \
+            if [ -f "$$f" ]; then \
+              echo "Exporting $$f to PDF..."; \
+              npx decktape reveal "file://$$PWD/$$f" "$$PWD/$${f%.html}.pdf" --chrome-arg=--no-sandbox; \
+            fi \
           done
 
       - name: Upload artifact
