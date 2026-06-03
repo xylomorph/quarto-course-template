@@ -17,7 +17,6 @@ __pycache__/
 # Node / npm
 node_modules/
 package-lock.json
-package.json
 
 # OS
 .DS_Store

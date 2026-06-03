@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@argdown/cli": "",
+    "@argdown/image-export": "",
+    "@argdown/pandoc-filter": "",
+    "decktape": ""
+  }
+}

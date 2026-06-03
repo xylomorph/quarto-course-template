@@ -70,19 +70,23 @@ pip install quarto-coursegen
 
 ### 4. Install Node dependencies (Argdown)
 
-Install node dependencies locally (under `./node_modules`):
+Install Argdown and related tools locally (will be installed under `./node_modules`):
 
 ```bash
-npm install -g decktape # for pdf output of slides
-npm install -g @argdown/cli
-npm install -g @argdown/pandoc-filter
-npm install -g @argdown/image-export
+npm install
 ```
+
+This installs the dependencies defined in `package.json`, including:
+- `@argdown/cli` — Argdown processor
+- `@argdown/pandoc-filter` — Pandoc filter for Argdown rendering
+- `@argdown/image-export` — Argdown diagram export
+- `decktape` — pdf output for revealjs slides
+
 
 > [!NOTE]
 > **Using globally installed Argdown**
 >
-> You can also install all node dependencies globally by using the `-g` flag. However, currently the Quarto files are configured to use a locally installed filter. The path
+> You can also install all node dependencies globally by using the `-g` flag with `npm install -g <pkg_name>`. However, currently the Quarto files are configured to use a locally installed filter. The path
 > is specified in the respective YAML file headers. Additionally, Quarto might have problems to detect a globally installed Argdown filter. Hence, you might have to specify the 
 > full path to it or add a wrapper script.
 
