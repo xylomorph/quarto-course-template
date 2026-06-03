@@ -1,5 +1,9 @@
 name: Deploy Quarto Course to GitHub Pages
 
+# This workflow handles the RENDERING stage only (not generation).
+# The GENERATION stage (quarto-coursegen) should be run locally to create .qmd stubs.
+# This workflow assumes all .qmd files already exist in the repository.
+
 on:
   # Runs on pushes to main branch
   push:
@@ -39,18 +43,30 @@ jobs:
           npm install @argdown/pandoc-filter
           npm install @argdown/image-export
 
+      # Install system dependencies for PDF rendering and Decktape/Chrome
+      # - Inkscape: converts SVG to PDF for Argdown maps in LaTeX documents
+      # - librsvg2-bin: rsvg-convert for SVG processing
+      # - libgbm1, libnss3, etc.: required by Puppeteer/Chrome for Decktape PDF export
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             inkscape \
-            librsvg2-bin
+            librsvg2-bin \
+            libgbm1 \
+            libnss3 \
+            libatk-bridge2.0-0 \
+            libx11-xcb1 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libasound2
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: '1.5.57'
-          tinytex: true
+          tinytex: true  # Use TinyTeX for automatic LaTeX package installation (e.g., fontawesome6)
 
       - name: Install Quarto extensions
         run: |
@@ -64,10 +80,13 @@ jobs:
         run: |
           quarto render content/slides/
 
+      # Export reveal.js slides to PDF using Decktape (Puppeteer/Chrome-based)
+      # --no-sandbox flag required: GitHub Actions runners don't support Chrome sandboxing
+      # This is safe in CI environments where the runner is already isolated
       - name: Export slides to PDF with Decktape
         run: |
           for f in docs/content/slides/*.html; do \
-            npx decktape reveal "$$f" "$${f%.html}.pdf"; \
+            npx decktape reveal "$$f" "$${f%.html}.pdf" -- --no-sandbox; \
           done
 
       - name: Upload artifact
