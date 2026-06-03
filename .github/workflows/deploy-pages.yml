@@ -81,12 +81,12 @@ jobs:
           quarto render content/slides/
 
       # Export reveal.js slides to PDF using Decktape (Puppeteer/Chrome-based)
-      # --no-sandbox flag required: GitHub Actions runners don't support Chrome sandboxing
+      # --chrome-arg=--no-sandbox required: GitHub Actions runners don't support Chrome sandboxing
       # This is safe in CI environments where the runner is already isolated
       - name: Export slides to PDF with Decktape
         run: |
           for f in docs/content/slides/*.html; do \
-            npx decktape reveal "$$f" "$${f%.html}.pdf" -- --no-sandbox; \
+            npx decktape reveal "$$f" "$${f%.html}.pdf" --chrome-arg=--no-sandbox; \
           done
 
       - name: Upload artifact
