@@ -31,7 +31,9 @@
     }%
   }%
   \fancyhead[R]{%
-    \raisebox{-\handoutlogooffset}{\includegraphics[height=1.2cm]{logo.png}}%
+    \IfFileExists{./assets/images/logo.png}{%
+      \raisebox{-\handoutlogooffset}{\includegraphics[height=1.2cm]{./assets/images/logo.png}}%
+    }{}%
   }%
   \fancyfoot[C]{%
     \parbox{\linewidth}{\centering
@@ -53,10 +55,10 @@ $if(title)$
   \vspace{1.5em}%
 }
 \maketitle
+$endif$
 \thispagestyle{firstpage}
 $if(abstract)$
 \begin{abstract}
 $abstract$
 \end{abstract}
-$endif$
 $endif$
