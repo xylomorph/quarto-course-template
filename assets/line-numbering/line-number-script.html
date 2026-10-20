@@ -1,0 +1,95 @@
+<script>
+(function () {
+  function collectVisualLines(block) {
+    const range = document.createRange();
+    range.selectNodeContents(block);
+
+    const rects = Array.from(range.getClientRects())
+      .filter(function (r) {
+        return r.width > 0.5 && r.height > 0.5;
+      })
+      .map(function (r) {
+        return {
+          top: r.top,
+          height: r.height
+        };
+      });
+
+    const unique = [];
+    const tolerance = 1.25;
+
+    rects.forEach(function (r) {
+      const existing = unique.find(function (u) {
+        return Math.abs(u.top - r.top) <= tolerance;
+      });
+
+      if (!existing) {
+        unique.push(r);
+      }
+    });
+
+    unique.sort(function (a, b) {
+      return a.top - b.top;
+    });
+
+    return unique;
+  }
+
+  function renderLineNumbers(block) {
+    if (!block) {
+      return;
+    }
+
+    const old = block.querySelector(":scope > .line-number-gutter");
+    if (old) {
+      old.remove();
+    }
+
+    const lines = collectVisualLines(block);
+    if (!lines.length) {
+      return;
+    }
+
+    const blockTop = block.getBoundingClientRect().top;
+    const gutter = document.createElement("div");
+    gutter.className = "line-number-gutter";
+
+    lines.forEach(function (line, i) {
+      const n = document.createElement("span");
+      n.className = "line-number-item";
+      n.textContent = String(i + 1);
+      n.style.top = String(line.top - blockTop) + "px";
+      n.style.height = String(line.height) + "px";
+      gutter.appendChild(n);
+    });
+
+    block.appendChild(gutter);
+  }
+
+  function refreshAll() {
+    document.querySelectorAll(".line-number").forEach(renderLineNumbers);
+  }
+
+  let raf = null;
+  function scheduleRefresh() {
+    if (raf !== null) {
+      cancelAnimationFrame(raf);
+    }
+    raf = requestAnimationFrame(function () {
+      raf = null;
+      refreshAll();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", scheduleRefresh);
+  window.addEventListener("load", scheduleRefresh);
+  window.addEventListener("resize", scheduleRefresh);
+
+  if (window.Reveal && typeof window.Reveal.on === "function") {
+    window.Reveal.on("ready", scheduleRefresh);
+    window.Reveal.on("slidechanged", scheduleRefresh);
+    window.Reveal.on("fragmentshown", scheduleRefresh);
+    window.Reveal.on("fragmenthidden", scheduleRefresh);
+  }
+})();
+</script>

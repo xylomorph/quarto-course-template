@@ -1,0 +1,36 @@
+.line-number {
+  position: relative;
+  border-left: 1px solid #d6dbe0;
+  padding-left: 2.2rem;
+  margin: 1.2rem 0;
+}
+
+.line-number-gutter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.8rem;
+  pointer-events: none;
+}
+
+.line-number-item {
+  position: absolute;
+  right: 0;
+  width: 1.6rem;
+  text-align: right;
+  color: #6c757d;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.86em;
+  line-height: 1;
+}
+
+.reveal .line-number {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.reveal .line-number-item {
+  width: 1.5rem;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.68em;
+}

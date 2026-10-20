@@ -1,0 +1,14 @@
+\usepackage[left]{lineno}
+\usepackage{xcolor}
+
+\setlength\linenumbersep{0.9em}
+\renewcommand\linenumberfont{\normalfont\scriptsize\sffamily\color{gray}}
+
+\newenvironment{LineNumberBlock}{%
+  \par\begingroup
+  \resetlinenumber[1]
+  \modulolinenumbers[1]
+  \linenumbers
+}{%
+  \par\endgroup
+}
