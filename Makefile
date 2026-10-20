@@ -16,11 +16,23 @@ website:
 slides:
 	quarto render content/slides/
 
-# Export slides to PDF using Decktape (requires decktape installed globally).
-slides-pdf: slides
+# Export slides to PDF using Decktape 
+# here, we use a locally installed decktape with an nvm-managed node whose version 
+# is pinned by a .nvmrc file. If you want to use a globally installed decktape, you can 
+# change the Makefile accordingly (see the commented-out lines below).
+slides-pdf:
+	. $(NVM_DIR)/nvm.sh && nvm use && \
 	for f in docs/content/slides/*.html; do \
-		decktape reveal "$$f" "$${f%.html}.pdf"; \
+		./node_modules/.bin/decktape reveal "$$f" "$${f%.html}.pdf"; \
 	done
+# locally installed decktape with default node version (not nvm-managed)
+# 	for f in docs/content/slides/*.html; do \
+# 		./node_modules/.bin/decktape reveal "$$f" "$${f%.html}.pdf"; \
+# 	done
+# globally installed decktape with default node version (not nvm-managed)
+# 	for f in docs/content/slides/*.html; do \
+# 		decktape reveal "$$f" "$${f%.html}.pdf"; \
+# 	done
 
 # Render handouts (PDF)
 handouts:

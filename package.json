@@ -1,8 +1,14 @@
 {
   "dependencies": {
+    "node-gyp": "",
+    "node-addon-api": "",
     "@argdown/cli": "",
     "@argdown/image-export": "",
     "@argdown/pandoc-filter": "",
     "decktape": ""
+  },
+  "allowScripts": {
+    "puppeteer@25.14.0": true,
+    "sharp@0.34.5": true
   }
 }
