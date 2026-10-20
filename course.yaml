@@ -17,8 +17,8 @@ course:
     institute: "Institute of Something"
 
   defaults:
-    status: planned        # planned | draft | review | published | archived
-    visibility: public     # public | internal | hidden
+    status: published      # planned | draft | review | published | archived
+    visibility: public     # public | hidden
     duration: 90           # minutes
 
   schedule:
@@ -30,7 +30,7 @@ course:
 artifacts:
   - id: syllabus
     type: syllabus
-    enabled: true
+    # enabled: false
     file: "content/syllabus.qmd"
 
 modules:
@@ -41,8 +41,9 @@ modules:
     description: >
       Overview of the course, its goals, and the assessment format.
     date: 2026-10-06
-    status: published
-    visibility: public
+    # status: draft
+    # visibility: hidden
+    overwrite: never
 
     learning_objectives: |
       - Understand the scope and goals of the course
@@ -51,18 +52,24 @@ modules:
     artifacts:
       - id: intro-slides
         type: slides
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [revealjs, beamer]
       - id: intro-handout
         type: handout
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [website, pdf]
       - id: intro-notes
         type: notes
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [pdf]
 
     lms:
@@ -74,12 +81,14 @@ modules:
   - id: topic-a
     type: lecture
     title: "Topic A"
-    subtitle: "Core concepts"
+    subtitle: "Argdown Examples"
     description: >
       Introduction to the core concepts and methods of the field.
     date: 2026-10-13
-    status: published
-    visibility: public
+    # enabled: false
+    # status: draft
+    # visibility: hidden
+    overwrite: never
 
     learning_objectives: |
       - Explain the fundamental concepts of Topic A
@@ -88,18 +97,24 @@ modules:
     artifacts:
       - id: topic-a-slides
         type: slides
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [revealjs, beamer]
       - id: topic-a-handout
         type: handout
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [website, pdf]
       - id: topic-a-assignment
         type: assignment
-        enabled: true
-        status: published
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [website, pdf]
 
     lms:
@@ -110,13 +125,15 @@ modules:
 
   - id: topic-b
     type: exercise
-    title: "Topic B — Practice Session"
-    subtitle: "Hands-on exercises"
+    title: "Topic B"
+    subtitle: "Using annotations and line numbers"
     description: >
       Guided practice applying the concepts from Topic A to real-world examples.
     date: 2026-10-20
-    status: planned
-    visibility: public
+    # enabled: false
+    # status: draft
+    # visibility: hidden
+    # overwrite: never
 
     learning_objectives: |
       - Solve applied problems using the methods from Topic A
@@ -125,15 +142,24 @@ modules:
     artifacts:
       - id: topic-b-slides
         type: slides
-        enabled: false          # no slides for exercise sessions
+        # enabled: false          # no slides for exercise sessions
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [revealjs]
       - id: topic-b-handout
         type: handout
-        enabled: true
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        overwrite: never
         output_formats: [website, pdf]
       - id: topic-b-assignment
         type: assignment
-        enabled: true
+        # enabled: false
+        # status: draft
+        # visibility: hidden
+        # overwrite: never
         output_formats: [website, pdf]
 
     lms:
