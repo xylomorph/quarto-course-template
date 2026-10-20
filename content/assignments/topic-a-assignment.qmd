@@ -10,15 +10,8 @@ term: "WS 2026"
 lang: "en"
 format:
   html: default
-  pdf:
-    documentclass: article
-    papersize: a4
-    include-in-header: ../../assets/latex/_handout-packages.tex
-    template-partials:
-      - ../../assets/latex/before-body.tex
+  pdf: default 
 due: "2026-10-20"
-reference-section-title: "References"
-bibliography: ../../bibliography.bib
 ---
 
 ## Instructions

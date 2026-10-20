@@ -1,5 +1,5 @@
 ---
-title: "Topic B — Practice Session: Assignment"
+title: "Assignment: Topic B — Practice Session (2026-10-20) - Hands-on exercises"
 date: "2026-10-20"
 author: "Prof. Jane Smith"
 organization: "My University"
@@ -10,14 +10,8 @@ term: "WS 2026"
 lang: "en"
 format:
   html: default
-  pdf:
-    documentclass: article
-    papersize: a4
-    include-in-header: ../../assets/latex/_handout-packages.tex
-    template-partials:
-      - ../../assets/latex/before-body.tex
+  pdf: default 
 due: "2026-10-27"
-reference-section-title: "References"
 ---
 
 ## Instructions

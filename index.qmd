@@ -10,13 +10,7 @@ term: "WS 2026"
 lang: "en"
 format:
   html: default
-  pdf:
-    documentclass: article
-    papersize: a4
-    toc: false
-    include-in-header: assets/latex/_handout-packages.tex
-    template-partials:
-      - assets/latex/before-body.tex
+  pdf: default
 ---
 
 ## Welcome
@@ -45,4 +39,16 @@ TODO: Add a short description or welcome message for the course.
 - **Start:** 2026-10-01
 - **End:** 2027-01-31
 - **Weekly day:** Monday
+
+## Modules
+
+
+- [Introduction](content/modules/intro.qmd) — Getting started
+
+
+- [Topic A](content/modules/topic-a.qmd) — Core concepts
+
+
+- [Topic B — Practice Session](content/modules/topic-b.qmd) — Hands-on exercises
+
 

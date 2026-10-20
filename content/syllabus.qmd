@@ -10,13 +10,7 @@ term: "WS 2026"
 lang: "en"
 format:
   html: default
-  pdf:
-    documentclass: article
-    papersize: a4
-    toc: false
-    include-in-header: ../assets/latex/_handout-packages.tex
-    template-partials:
-      - ../assets/latex/before-body.tex
+  pdf: default
 ---
 
 ## Course Information
@@ -46,10 +40,55 @@ format:
 
 ## Modules
 
-| # | Date | Title | 
-|---|------|-------|
-| 1 | 06.10.2026 | [Getting started](modules/intro.qmd) |
-| 2 | 13.10.2026 | [Core concepts](modules/topic-a.qmd) |
-| 3 | 20.10.2026 | [Hands-on exercises](modules/topic-b.qmd) |
+::: {.content-visible when-format="html"}
+
+| # | Date | Title | Subtitle |
+|---|------|-------|--------|
+| 1 | 2026-10-06 | [Introduction](modules/intro.qmd) | Getting started |
+| 2 | 2026-10-13 | [Topic A](modules/topic-a.qmd) | Core concepts |
+| 3 | 2026-10-20 | [Topic B — Practice Session](modules/topic-b.qmd) | Hands-on exercises |
 
 
+:::
+
+::: {.content-visible when-format="pdf"}
+
+| # | Date | Title | Subtitle |
+|---|------|-------|--------|
+| 1 | 2026-10-06 | Introduction | Getting started |
+| 2 | 2026-10-13 | Topic A | Core concepts |
+| 3 | 2026-10-20 | Topic B — Practice Session | Hands-on exercises |
+
+
+:::
+
+<!-- Possibly uncomment and edit the following section to add learning objectives to the syllabus. -->
+<!--
+## Learning Objectives
+
+
+### Introduction
+
+
+- Understand the scope and goals of the course
+- Know the assessment format and grading criteria
+
+
+
+### Topic A
+
+
+- Explain the fundamental concepts of Topic A
+- Apply the basic methods to simple examples
+
+
+
+### Topic B — Practice Session
+
+
+- Solve applied problems using the methods from Topic A
+- Reflect on limitations and open questions
+
+
+
+-->

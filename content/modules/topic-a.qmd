@@ -11,14 +11,7 @@ course: "My Course"
 term: "WS 2026"
 lang: "en"
 format:
-  html:
-    argdown:
-      mode: web-component
-      sourceHighlighter: web-component
-      config: ../../argdown.config.json
-filters:
-  - ../../node_modules/.bin/argdown-filter
-bibliography: ../../bibliography.bib
+  html: default
 ---
 
 ## {{< fa circle-info >}} Overview
