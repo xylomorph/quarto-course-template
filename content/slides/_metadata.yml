@@ -1,0 +1,26 @@
+format:
+  revealjs:
+    theme: [default, ../../assets/styles/slides.scss]
+    slide-number: true
+    # embed-resources: true (not compatible with argdown using web components)
+    preview-links: auto
+    pdfSeparateFragments: true
+    logo: ../../assets/images/logo.png
+    controls: true
+    include-after-body:
+      - ../../assets/line-numbering/line-number-script.html
+    css:
+      - ../../assets/line-numbering/line-number.css
+
+
+# second specification (this one is needed for the specific `make slides` target).
+bibliography: ../../bibliography.bib
+
+filters:
+  - ../../node_modules/.bin/argdown-filter
+  # - ../../_extensions/argannot/resources/argannot.lua
+  # - argannot
+argdown:
+  sourceHighlighter: web-component
+  mode: web-component
+  config: ../../argdown.config.json

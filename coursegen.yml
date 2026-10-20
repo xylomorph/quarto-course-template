@@ -1,0 +1,7 @@
+protected_paths:          # optional paths protected from generate --force
+  # - index.qmd
+  # - _quarto.yml
+  - _quarto-format.yml
+  # we lock quarto config for slides since we use a `_metadata.yml` for format options
+  # Note, that this `_quarto.yml` is only relevant for the `slide` target.
+  - content/slides/_quarto.yml

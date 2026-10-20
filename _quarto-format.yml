@@ -1,0 +1,45 @@
+# This file is currently protected from overwriting via `coursegen.yml`.
+# Edit _quarto.yml to adjust project settings.
+
+format:
+  html:
+    template-partials:
+      - assets/partials/title-block.html
+    include-after-body:
+      - assets/line-numbering/line-number-script.html
+    theme:
+      - flatly
+      - assets/styles/custom.scss
+    css:
+      - assets/line-numbering/line-number.css
+    toc: true
+    toc-depth: 3
+    argdown:
+      mode: web-component
+      sourceHighlighter: web-component
+      config: argdown.config.json
+  pdf:
+    documentclass: article
+    papersize: a4
+    include-in-header:
+      - assets/latex/_handout-packages.tex
+      - assets/line-numbering/line-numbering.tex
+    template-partials:
+      - assets/latex/before-body.tex
+    syntax-definitions:
+      - assets/pandoc/argdown.xml
+    syntax-highlighting: assets/pandoc/argdown.theme
+    # Required for the LaTeX svg package to call Inkscape when converting
+    # inline SVG images produced by the argdown-filter (mode: inline, format: svg).
+    pdf-engine-opt: "-shell-escape"
+    argdown:
+      mode: inline
+      format: svg
+      config: argdown.config.json
+
+filters:
+  - node_modules/.bin/argdown-filter # On Linux/macOS
+  - assets/line-numbering/line-number-pdf.lua
+  # - node_modules/.bin/argdown-filter.cmd # On Windows
+
+bibliography: bibliography.bib
