@@ -1,5 +1,5 @@
 ---
-title: "Handout: Topic B — Practice Session (2026-10-20) - Hands-on exercises"
+title: "Handout: Topic B (2026-10-20) - Using annotations and line numbers"
 date: "2026-10-20"
 author: "Prof. Jane Smith"
 organization: "My University"
@@ -13,17 +13,25 @@ format:
   pdf: default 
 ---
 
-## Learning Objectives
-
-
-- Solve applied problems using the methods from Topic A
-- Reflect on limitations and open questions
 
 
 ## Content
 
-TODO: Add handout content.
+Annotated text:
 
-## Exercises
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-TODO: Add exercises.
+> [At vero eos et accusam et justo duo dolores et ea rebum.]{.ann-premise} Quisque faucibus ex sapien vitae pellentesque sem placerat. [Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.]{.ann-premise} Tempus leo eu aenean sed diam urna tempor. [Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua]{.ann-conclusion} Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+
+
+Text with line numbers: 
+
+::: {.line-number}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+:::
+
+Mixing line numbers with quotation env:
+
+::: {.line-number}
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+:::

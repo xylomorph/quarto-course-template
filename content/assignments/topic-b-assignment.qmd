@@ -1,5 +1,5 @@
 ---
-title: "Assignment: Topic B — Practice Session (2026-10-20) - Hands-on exercises"
+title: "Assignment: Topic B (2026-10-20) - Using annotations and line numbers"
 date: "2026-10-20"
 author: "Prof. Jane Smith"
 organization: "My University"

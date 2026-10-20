@@ -51,15 +51,12 @@ The question of whether those adherents hold their beliefs *sincerely* — and w
 The logical structure of Henderson's letter can be formalised as a premise–conclusion structure:
 
 ```argdown
-===
-sourceHighlighter:
-    removeFrontMatter: true
-===
 
 [Equal time]: The Flying Spaghetti Monster theory deserves equal time
               in public school science classes.
 
-<Equality argument>
+<Equality argument>: Flying Spaghetti Monster theory deserves equal time
+in public school science classes as the intelligent design theory.
 
 (1) If one supernatural creation theory receives time in public school science classes,
     all other supernatural theories are equally entitled to time.

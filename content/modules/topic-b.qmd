@@ -1,6 +1,6 @@
 ---
-title: "Topic B — Practice Session (2026-10-20)"
-subtitle: "Hands-on exercises" 
+title: "Topic B (2026-10-20)"
+subtitle: "Using annotations and line numbers" 
 date: "2026-10-20"
 status: "published"
 lang: "en"
@@ -19,6 +19,22 @@ Guided practice applying the concepts from Topic A to real-world examples.
 
 - Solve applied problems using the methods from Topic A
 - Reflect on limitations and open questions
+
+
+
+
+
+
+
+
+## {{< fa display >}} Slides
+
+ [Slides in full screen](../slides/topic-b-slides.html){target="_blank"}  
+
+
+```{=html}
+<iframe class="slide-deck" src="../slides/topic-b-slides.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
 
 
 
@@ -49,6 +65,15 @@ TODO: Add content.
 
 
 ## {{< fa folder-open >}} Materials
+
+
+
+
+
+
+
+- **Slides**: [{{< fa link >}}](../slides/topic-b-slides.html)
+
 
 
 
