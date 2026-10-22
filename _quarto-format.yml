@@ -12,6 +12,7 @@ format:
       - assets/styles/custom.scss
     css:
       - assets/line-numbering/line-number.css
+      - assets/markup/annotations.css
     toc: true
     toc-depth: 3
     argdown:
@@ -24,6 +25,7 @@ format:
     include-in-header:
       - assets/latex/_handout-packages.tex
       - assets/line-numbering/line-numbering.tex
+      - assets/markup/markup.tex
     template-partials:
       - assets/latex/before-body.tex
     syntax-definitions:
@@ -39,7 +41,9 @@ format:
 
 filters:
   - node_modules/.bin/argdown-filter # On Linux/macOS
-  - assets/line-numbering/line-number-pdf.lua
   # - node_modules/.bin/argdown-filter.cmd # On Windows
+  - assets/line-numbering/line-number-pdf.lua
+  - assets/markup/annotation-spans-pdf.lua
+
 
 bibliography: bibliography.bib
