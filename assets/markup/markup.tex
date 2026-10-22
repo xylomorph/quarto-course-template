@@ -1,0 +1,20 @@
+
+% Semantic annotation styles for span classes mapped by lua filter
+\usepackage{soul}
+\usepackage{marginnote}
+\definecolor{annhighlightbg}{HTML}{FFF2C9}
+\definecolor{annpremisebg}{HTML}{EAF4FF}
+\definecolor{annconclusionbg}{HTML}{FFF4DE}
+\definecolor{annkeybg}{HTML}{FFF0E1}
+\definecolor{anndoubtbg}{HTML}{FDECEF}
+\definecolor{anndoubttext}{HTML}{7F0719}
+\definecolor{annmarginalbg}{HTML}{EAF0F4}
+\definecolor{annmarginalnotebg}{HTML}{F4F7FA}
+\definecolor{annmarginalborder}{HTML}{B5CBD6}
+\definecolor{annmarginaltext}{HTML}{003964}
+\newcommand{\annhighlight}[1]{\begingroup\sethlcolor{annhighlightbg}\hl{#1}\endgroup}
+\newcommand{\annpremise}[1]{\begingroup\sethlcolor{annpremisebg}\hl{#1}\endgroup}
+\newcommand{\annconclusion}[1]{\begingroup\sethlcolor{annconclusionbg}\hl{#1}\endgroup}
+\newcommand{\annkey}[1]{\begingroup\sethlcolor{annkeybg}\hl{\textit{#1}}\endgroup}
+\newcommand{\anndoubt}[1]{\begingroup\sethlcolor{anndoubtbg}\hl{#1}\endgroup}
+\newcommand{\annmarginal}[2]{\begingroup\sethlcolor{annmarginalbg}\hl{#1}\endgroup\if\relax\detokenize{#2}\relax\else\marginnote{\footnotesize\itshape\textcolor{annmarginaltext}{\fcolorbox{annmarginalborder}{annmarginalnotebg}{#2}}}\fi}
