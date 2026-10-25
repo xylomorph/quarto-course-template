@@ -68,6 +68,12 @@ jobs:
           version: '1.5.57'
           tinytex: true  # Use TinyTeX for automatic LaTeX package installation (e.g., fontawesome6)
 
+      - name: Install required TeX packages for PDF handouts
+        run: |
+          tlmgr option repository https://mirror.ctan.org/systems/texlive/tlnet
+          tlmgr update --self
+          tlmgr install svg mdframed
+
       - name: Install Quarto extensions
         run: |
           quarto add quarto-ext/fontawesome --no-prompt
