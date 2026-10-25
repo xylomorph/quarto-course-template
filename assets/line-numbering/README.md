@@ -1,6 +1,6 @@
 # Reusable Visual Line Numbering (Quarto)
 
-This module provides visual line numbering for fenced divs marked with `.line-number` across:
+This module provides visual line numbering for fenced divs marked with `.line-numbers` across:
 
 - HTML (website/docs)
 - reveal.js slides
@@ -13,7 +13,7 @@ It counts rendered (wrapped) lines, not just paragraph blocks.
 Use this in any `.qmd` file:
 
 ```markdown
-::: {.line-number}
+::: {.line-numbers}
 Your long text here. Wrapped lines are counted.
 :::
 ```
@@ -22,7 +22,7 @@ Your long text here. Wrapped lines are counted.
 
 - `line-number.css`: shared styles for gutter + numbers (HTML/reveal)
 - `line-number-script.html`: browser logic to compute rendered line boxes
-- `line-number-pdf.lua`: wraps `.line-number` blocks for LaTeX
+- `line-number-pdf.lua`: wraps `.line-numbers` blocks for LaTeX
 - `line-numbering.tex`: `lineno` setup for wrapped-line numbering in PDF
 
 ## Root Project Wiring (example)
@@ -65,4 +65,4 @@ filters:
 
 1. Copy `assets/line-numbering/` into the target project.
 2. Add the YAML wiring shown above.
-3. Use `::: {.line-number}` where needed.
+3. Use `::: {.line-numbers}` where needed.

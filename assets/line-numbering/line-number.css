@@ -1,3 +1,4 @@
+.line-numbers,
 .line-number {
   position: relative;
   border-left: 1px solid #d6dbe0;
@@ -24,6 +25,7 @@
   line-height: 1;
 }
 
+.reveal .line-numbers,
 .reveal .line-number {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   margin: 1rem 0;

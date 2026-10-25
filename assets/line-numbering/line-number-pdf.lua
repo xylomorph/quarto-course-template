@@ -1,4 +1,4 @@
--- Wrap ::: {.line-number} blocks in a LaTeX lineno environment.
+-- Wrap ::: {.line-numbers} blocks in a LaTeX lineno environment.
 -- This numbers true rendered lines in PDF, including auto-wrapped lines.
 
 local function has_class(classes, class_name)
@@ -15,7 +15,7 @@ function Div(div)
     return nil
   end
 
-  if not has_class(div.classes, "line-number") then
+  if not has_class(div.classes, "line-numbers") and not has_class(div.classes, "line-number") then
     return nil
   end
 
