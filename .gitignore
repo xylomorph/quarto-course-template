@@ -1,5 +1,5 @@
 # Quarto rendered output
-#docs/
+docs/
 /misc/
 
 # Quarto caches
@@ -8,15 +8,19 @@
 # *_files/ — kept so that revealjs and other _files assets are deployed to GitHub Pages
 # Quarto extension
 _extensions/
+svg-inkscape/
 
 # Python
 __pycache__/
 *.py[oc]
 .venv/
+uv.lock
 
 # Node / npm
 node_modules/
 package-lock.json
+.puppeteerrc.cjs
+.cache/
 
 # OS
 .DS_Store
