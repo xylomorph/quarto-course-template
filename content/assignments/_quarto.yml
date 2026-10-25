@@ -8,9 +8,7 @@ project:
 
 format:
   html: default
-  pdf:
-    documentclass: article
-    papersize: a4
+  pdf: default
 
 render:
   - topic-a-assignment.qmd

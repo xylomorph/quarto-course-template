@@ -37,7 +37,7 @@ website:
 
 
 
-        - section: "Topic B — Practice Session"
+        - section: "Topic B"
           href: content/modules/topic-b.qmd
           contents:
             - text: "Handout"

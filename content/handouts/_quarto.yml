@@ -7,10 +7,8 @@ project:
   output-dir: ../../docs/content/handouts
 
 format:
-  pdf:
-    documentclass: article
-    papersize: a4
-    toc: false
+  pdf: default
+  html: default
 
 render:
   - intro-handout.qmd

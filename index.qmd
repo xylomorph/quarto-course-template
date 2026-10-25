@@ -46,9 +46,9 @@ TODO: Add a short description or welcome message for the course.
 - [Introduction](content/modules/intro.qmd) — Getting started
 
 
-- [Topic A](content/modules/topic-a.qmd) — Core concepts
+- [Topic A](content/modules/topic-a.qmd) — Argdown Examples
 
 
-- [Topic B — Practice Session](content/modules/topic-b.qmd) — Hands-on exercises
+- [Topic B](content/modules/topic-b.qmd) — Using annotations and line numbers
 
 

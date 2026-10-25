@@ -45,8 +45,8 @@ format:
 | # | Date | Title | Subtitle |
 |---|------|-------|--------|
 | 1 | 2026-10-06 | [Introduction](modules/intro.qmd) | Getting started |
-| 2 | 2026-10-13 | [Topic A](modules/topic-a.qmd) | Core concepts |
-| 3 | 2026-10-20 | [Topic B — Practice Session](modules/topic-b.qmd) | Hands-on exercises |
+| 2 | 2026-10-13 | [Topic A](modules/topic-a.qmd) | Argdown Examples |
+| 3 | 2026-10-20 | [Topic B](modules/topic-b.qmd) | Using annotations and line numbers |
 
 
 :::
@@ -56,8 +56,8 @@ format:
 | # | Date | Title | Subtitle |
 |---|------|-------|--------|
 | 1 | 2026-10-06 | Introduction | Getting started |
-| 2 | 2026-10-13 | Topic A | Core concepts |
-| 3 | 2026-10-20 | Topic B — Practice Session | Hands-on exercises |
+| 2 | 2026-10-13 | Topic A | Argdown Examples |
+| 3 | 2026-10-20 | Topic B | Using annotations and line numbers |
 
 
 :::
@@ -83,7 +83,7 @@ format:
 
 
 
-### Topic B — Practice Session
+### Topic B
 
 
 - Solve applied problems using the methods from Topic A
