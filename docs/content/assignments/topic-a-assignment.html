@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-0282f289232f82f459a68ff86e7d4cd5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -74,6 +74,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../../assets/line-numbering/line-number.css">
+<link rel="stylesheet" href="../../assets/markup/annotations.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -165,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../content/modules/topic-b.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Topic B — Practice Session</span></a>
+ <span class="menu-text">Topic B</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -263,6 +265,101 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+(function () {
+  function collectVisualLines(block) {
+    const range = document.createRange();
+    range.selectNodeContents(block);
+
+    const rects = Array.from(range.getClientRects())
+      .filter(function (r) {
+        return r.width > 0.5 && r.height > 0.5;
+      })
+      .map(function (r) {
+        return {
+          top: r.top,
+          height: r.height
+        };
+      });
+
+    const unique = [];
+    const tolerance = 1.25;
+
+    rects.forEach(function (r) {
+      const existing = unique.find(function (u) {
+        return Math.abs(u.top - r.top) <= tolerance;
+      });
+
+      if (!existing) {
+        unique.push(r);
+      }
+    });
+
+    unique.sort(function (a, b) {
+      return a.top - b.top;
+    });
+
+    return unique;
+  }
+
+  function renderLineNumbers(block) {
+    if (!block) {
+      return;
+    }
+
+    const old = block.querySelector(":scope > .line-number-gutter");
+    if (old) {
+      old.remove();
+    }
+
+    const lines = collectVisualLines(block);
+    if (!lines.length) {
+      return;
+    }
+
+    const blockTop = block.getBoundingClientRect().top;
+    const gutter = document.createElement("div");
+    gutter.className = "line-number-gutter";
+
+    lines.forEach(function (line, i) {
+      const n = document.createElement("span");
+      n.className = "line-number-item";
+      n.textContent = String(i + 1);
+      n.style.top = String(line.top - blockTop) + "px";
+      n.style.height = String(line.height) + "px";
+      gutter.appendChild(n);
+    });
+
+    block.appendChild(gutter);
+  }
+
+  function refreshAll() {
+    document.querySelectorAll(".line-numbers, .line-number").forEach(renderLineNumbers);
+  }
+
+  let raf = null;
+  function scheduleRefresh() {
+    if (raf !== null) {
+      cancelAnimationFrame(raf);
+    }
+    raf = requestAnimationFrame(function () {
+      raf = null;
+      refreshAll();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", scheduleRefresh);
+  window.addEventListener("load", scheduleRefresh);
+  window.addEventListener("resize", scheduleRefresh);
+
+  if (window.Reveal && typeof window.Reveal.on === "function") {
+    window.Reveal.on("ready", scheduleRefresh);
+    window.Reveal.on("slidechanged", scheduleRefresh);
+    window.Reveal.on("fragmentshown", scheduleRefresh);
+    window.Reveal.on("fragmenthidden", scheduleRefresh);
+  }
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

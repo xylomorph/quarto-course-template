@@ -1,0 +1,66 @@
+/* Annotation classes extracted from slides.scss for reusable markup styling */
+
+/* .ann-highlight: neutral yellow marker */
+.ann-highlight {
+  background: rgba(255, 210, 50, 0.4);
+  border-bottom: 2px solid rgba(230, 170, 0, 0.7);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+/* .ann-premise: premise marker */
+.ann-premise {
+  background: rgba(0, 106, 179, 0.15);
+  border-bottom: 2px solid #006ab3;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+/* .ann-conclusion: conclusion marker */
+.ann-conclusion {
+  background: rgba(140, 177, 16, 0.18);
+  border-bottom: 2px solid #8cb110;
+  padding: 0 3px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* .ann-key: key term marker */
+.ann-key {
+  border-bottom: 2.5px solid #ee7f00;
+  padding-bottom: 1px;
+  font-style: italic;
+}
+
+/* .ann-doubt: skeptical or doubt passage */
+.ann-doubt {
+  background: rgba(190, 10, 38, 0.1);
+  border-left: 3px solid #be0a26;
+  padding: 0 4px 0 6px;
+  border-radius: 2px;
+}
+
+/* .ann-marginal: marginal note via data-note attribute */
+.ann-marginal {
+  position: relative;
+  background: rgba(0, 57, 100, 0.1);
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+.ann-marginal::after {
+  content: attr(data-note);
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0.62em;
+  font-style: italic;
+  color: #003964;
+  background: rgba(181, 203, 214, 0.55);
+  border: 1px solid #b5cbd6;
+  border-radius: 3px;
+  padding: 1px 5px;
+  pointer-events: none;
+}
