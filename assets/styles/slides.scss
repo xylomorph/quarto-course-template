@@ -6,23 +6,23 @@ $presentation-h2-font-size: 1em;
 $presentation-h3-font-size: 1em;
 
 // HHU Primary colors
-$hhu-blue:     #006ab3;  // HHU Blau – primary/logo color
-$hhu-black:    #000000;  // Schwarz – body text only
+$template-blue:     #006ab3;  // HHU Blau – primary/logo color
+$template-black:    #000000;  // Schwarz – body text only
 
 // HHU Secondary colors
-$hhu-green:    #8cb110;
-$hhu-orange:   #ee7f00;
-$hhu-red:      #be0a26;
-$hhu-teal:     #57bab1;
-$hhu-darkblue: #003964;
-$hhu-iceblue:  #b5cbd6;
+$template-green:    #8cb110;
+$template-orange:   #ee7f00;
+$template-red:      #be0a26;
+$template-teal:     #57bab1;
+$template-darkblue: #003964;
+$template-iceblue:  #b5cbd6;
 
 // Callout colors (mapped to HHU palette)
-$callout-color-note:      $hhu-blue;      // HHU Blau
-$callout-color-tip:       $hhu-green;     // HHU Grün
-$callout-color-warning:   $hhu-orange;    // HHU Orange
-$callout-color-caution:   $hhu-red;       // HHU Rot
-$callout-color-important: $hhu-darkblue;  // HHU Dunkelblau
+$callout-color-note:      $template-blue;      // HHU Blau
+$callout-color-tip:       $template-green;     // HHU Grün
+$callout-color-warning:   $template-orange;    // HHU Orange
+$callout-color-caution:   $template-red;       // HHU Rot
+$callout-color-important: $template-darkblue;  // HHU Dunkelblau
 
 
 
@@ -35,13 +35,13 @@ $callout-color-important: $hhu-darkblue;  // HHU Dunkelblau
 .reveal h1,
 .reveal .title,
 .reveal .subtitle {
-    color: $hhu-blue;
+    color: $template-blue;
     font-family: Arial, sans-serif;
     font-weight: 700;
   }
 
 .reveal h2 {
-    color: $hhu-blue;
+    color: $template-blue;
     font-family: Arial, sans-serif;
     font-weight: 700;
     margin-bottom: 0.8em;
@@ -50,48 +50,48 @@ $callout-color-important: $hhu-darkblue;  // HHU Dunkelblau
 /*-- callout color overrides --*/
 
 .reveal .callout-note {
-  border-left-color: $hhu-blue !important;
+  border-left-color: $template-blue !important;
   background-color: rgba(0, 106, 179, 0.07);
 }
 .reveal .callout-note .callout-header {
   background-color: rgba(0, 106, 179, 0.28);
-  color: $hhu-blue;
+  color: $template-blue;
 }
 
 .reveal .callout-tip {
-  border-left-color: $hhu-green !important;
+  border-left-color: $template-green !important;
   background-color: rgba(140, 177, 16, 0.07);
 }
 .reveal .callout-tip .callout-header {
   background-color: rgba(140, 177, 16, 0.28);
-  color: darken($hhu-green, 10%);
+  color: darken($template-green, 10%);
 }
 
 .reveal .callout-warning {
-  border-left-color: $hhu-orange !important;
+  border-left-color: $template-orange !important;
   background-color: rgba(238, 127, 0, 0.07);
 }
 .reveal .callout-warning .callout-header {
   background-color: rgba(238, 127, 0, 0.28);
-  color: darken($hhu-orange, 10%);
+  color: darken($template-orange, 10%);
 }
 
 .reveal .callout-caution {
-  border-left-color: $hhu-red !important;
+  border-left-color: $template-red !important;
   background-color: rgba(190, 10, 38, 0.07);
 }
 .reveal .callout-caution .callout-header {
   background-color: rgba(190, 10, 38, 0.28);
-  color: $hhu-red;
+  color: $template-red;
 }
 
 .reveal .callout-important {
-  border-left-color: $hhu-darkblue !important;
+  border-left-color: $template-darkblue !important;
   background-color: rgba(0, 57, 100, 0.07);
 }
 .reveal .callout-important .callout-header {
   background-color: rgba(0, 57, 100, 0.28);
-  color: $hhu-darkblue;
+  color: $template-darkblue;
 }
 
 /*-- chat message formatting --*/
