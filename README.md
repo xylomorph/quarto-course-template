@@ -1,9 +1,10 @@
-# quarto-course-template
+# Quarto Course Template
 
 <div align="center">
   <p align="center">
   🔗 <a href="https://sebastiancacean.de/quarto-course-template">Generated Course Website (Illustration)</a>
   ⚙️ <a href="https://github.com/xylomorph/quarto-coursegen">Quarto Course Generator</a>
+  <!-- xx link to blog post -->
  </p>
 </div>
 <br/>
@@ -17,11 +18,12 @@ Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen)
 
 - **Course website** — Quarto website with navigation generated from `course.yaml`
 - **Slides** — Reveal.js HTML slides + optional Beamer PDF, exported to PDF via Decktape
-- **Handouts & notes** — PDF output with custom HHU-style header/footer via LaTeX partials
+- **Handouts & notes** — PDF output with custom header/footer via LaTeX partials
 - **Assignments** — HTML + PDF artifacts
 - **Argdown integration** — live argument maps and highlighted source blocks in slides (web-component) and PDF outputs (inline SVG)
-- **Custom annotation CSS** — `.ann-premise`, `.ann-conclusion`, `.ann-key`, `.ann-doubt`, `.ann-marginal` span classes for slide markup
+- **Custom annotation CSS** — `.ann-premise`, `.ann-conclusion`, `.ann-key`, `.ann-doubt`, `.ann-marginal` span classes for slide markup (see xx for details).
 - **Argdown syntax highlighting** in PDF via a custom `.xml` syntax definition and `.theme` file
+- **Line numbering** for html and PDF outputs (see xx for details).
 
 ---
 
@@ -42,7 +44,7 @@ Based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen)
 ## Getting Started
 
 > [!NOTE]
-> There are two ways to customize this template to your needs: You can use the [`quarto-coursgen` CLI](https://github.com/xylomorph/quarto-coursegen) to generate stubs for Quarto files (Steps 6 & 7) or you can create and modify Quarto files without using the `quarto-coursgen` CLI. In this case, simply skip Step 3, 6 and 7.
+> There are two ways to customize this template to your needs: You can use the [`quarto-coursgen` CLI](https://github.com/xylomorph/quarto-coursegen) to generate stubs for Quarto files (Steps 6 & 7) or you can create and modify Quarto files without using the `quarto-coursgen` CLI. In this case, simply skip Step 3, 6 and 7. 
 
 
 ### 1. Create your course repo
@@ -76,12 +78,17 @@ Install Argdown and related tools locally (will be installed under `./node_modul
 npm install
 ```
 
+If you use an nvm-managed Node version, pin the version in `.nvmrc` and run `nvm use` before running `npm install`.
+
 This installs the dependencies defined in `package.json`, including:
 - `@argdown/cli` — Argdown processor
 - `@argdown/pandoc-filter` — Pandoc filter for Argdown rendering
 - `@argdown/image-export` — Argdown diagram export
 - `decktape` — pdf output for revealjs slides
 
+
+> [!NOTE]
+> Depending on your node setup, you have to adapt the `slides-pdf` target in the Makefile. Currently, the Makefile uses a locally installed `decktape` (via `./node_modules/.bin/decktape`) with an nvm-managed node whose version is pinned by a `.nvmrc` file. If you want to use a globally installed `decktape`, you can change the Makefile accordingly (see the commented-out lines in the Makefile).
 
 > [!NOTE]
 > **Using globally installed Argdown**
@@ -91,8 +98,18 @@ This installs the dependencies defined in `package.json`, including:
 > full path to it or add a wrapper script.
 
 
-Alternatively, install locally (under `./node_modules`) by not using the `-g` flag.
+Depending on your setup, you might also need a locally (project-specific) installed version of the needed headless Chromium (which is needed for `decktape` to generated PDFs from Revealjs slides). To do so, create a file `.puppeteerrc.cjs` in the project root with the following content:
 
+```js
+const { join } = require('path');
+
+/** @type {import('puppeteer').Configuration} */
+module.exports = {
+  cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
+};
+```
+
+If you created this file, just run `npm install` again to install the headless chrome in the specified cache directory.
 
 ### 5. Install system dependencies
 
@@ -108,6 +125,8 @@ Also install the LaTeX `svg` and `mdframed` packages if not included with your T
 ### 6. Configure your course
 
 Edit `course.yaml` to define your course metadata, modules, and artifacts. This is the single source of truth — all stubs and navigation are generated from it.
+
+👉 For details, consult the [Quarto course generator documentation](https://sebastiancacean.de/quarto-coursegen/).
 
 Key fields:
 
@@ -134,19 +153,39 @@ modules:
       - id: intro-slides
         type: slides
         output_formats: [revealjs, beamer]
+        visibility: hidden # hide from website navigation
+        overwrite: never # lock this file from being overwritten by the generator (even with `make generate-force`)
       - id: intro-handout
         type: handout
         output_formats: [website, pdf]
+        visibility: public # show in website navigation
+        overwrite: on-force # allow overwriting this file with `make generate-force`
 ```
+
+The field `overwrite` can be used to define file-specific overwrite policies for the generated stubs (see the [docs](https://sebastiancacean.de/quarto-coursegen/commands/generate.html#overwrite-policy) for details).
 
 ### 7. Generate stubs
 
+The following command will create stubs for files (e.g., in `content/slides/*.qmd`, `content/handouts/*.qmd`, `index.qmd`, `_quarto.yml`, etc.) depending on the specified overwrite policies in `course.yaml` and `course-gen.yaml`.
+
+There are two make targets for generating stubs:
+
 ```bash
 make generate        # safe: skips existing stubs
-make generate-force  # overwrites all stubs
 ```
 
-This creates `content/slides/*.qmd`, `content/handouts/*.qmd`, `index.qmd`, `_quarto.yml`, etc.
+is a safe operation that generates Quarto stubs for slides, handouts, notes, assignments, and the website index. It will **skip** any existing content files.
+
+If you want to have more control over the overwrite policies, you can use the `make generate-force` command:
+
+```bash
+make generate-force  # overwrites all stubs unless locked via the 
+```
+
+This will overwrite all stubs unless they are locked via the `overwrite` field in `course.yaml`.
+
+Additionally, you can lock files from overwriting that are not implicitly specified in `course.yaml` by adding them to the `course-gen.yaml` config file. In this way, you can, for instance, lock `_quarto.qmd` files from overwriting. See the [docs](https://sebastiancacean.de/quarto-coursegen/configuration.html) for details.
+
 
 ### 8. Add your content
 
@@ -159,12 +198,11 @@ See [Argdown usage](#argdown-usage) below for details about using Argdown.
 **Local rendering:**
 
 ```bash
-make website        # Quarto website (HTML)
-make slides         # Reveal.js slides
-make slides-pdf     # Export slides to PDF via Decktape
-make handouts       # PDF handouts
-make all            # Everything
+make all            # Renders everything
 ```
+
+
+<!-- xx info about the different quarto files -->
 
 **GitHub Pages deployment:**
 
@@ -220,6 +258,26 @@ Your site will be available at `https://<username>.github.io/<repository-name>/`
 
 ---
 
+## Background Information
+
+This template is based on the [`quarto-coursegen`](https://github.com/xylomorph/quarto-coursegen). This template adds some specific features that go beyond a blank course generated by `quarto-coursegen --init`. 
+
+These adaptations include the following points: 
+
++ Argdown-Quarto integration is configured in `./content/slide/_metadata.yml` for slides and in `_quarto-format.yml` for the rest. Both files are locked from overwriting in `course-gen.yaml` to prevent accidental overwriting. 
+  + If you want to use the subproject-specific make targets (e.g. via `make handouts`) , update the corresponding `_quarto.yml` files in the generated content directories (and lock them in `course-gen.yaml` to prevent overwriting).
++ There is a global Argdown configuration file `argdown.config.json` that is referenced in the former files. These setting can be overridden in the YAML frontmatter of individual `argdown` blocks (see below).
++ This template uses the default Jinja2 templates provided by the `quarto-coursegen` generator. If you want to change the default templates, you can do so by copying the default templates from the `quarto-coursegen` package into the `templates/` directory of your course project.
++ `quarto-coursegen` gives you file-specific overwrite policies for the generated stubs if you use the `--force` option. You can specify them in `course.yml` and `course-gen.yaml` (see [here](https://sebastiancacean.de/quarto-coursegen/commands/generate.html#overwrite-policy) and [here](https://sebastiancacean.de/quarto-coursegen/configuration.html#example-protect-root-hand-editable-stubs)).
+
+
+<!--
+xx
+There are several possible workflows to use the generator. You can consult the documentation of the generator for more details. The workflow I often use is the described in this blog post: [link to blog post]. 
+
+In the current setting ... x will not be overwritten but y will be overwritten.
+-->
+
 ## Customization
 
 ### Logos
@@ -239,13 +297,7 @@ Update the filenames referenced in:
 
 ### Bibliography
 
-Add a `.bib` file to `assets/` and reference it in each document's YAML frontmatter:
-
-```yaml
-bibliography: ../../assets/references.bib
-```
-
-🚧 TODO: currently a `bibliography.bib` is placed in the root dir and referenced in the example content.
+Simply replace the given `bibliography.bib` that is placed in the root dir and reference citation as documented in the Quarto documentation.
 
 ### Language
 
@@ -299,7 +351,7 @@ sourceHighlighter:
 ```
 ````
 
-The `argdown.config.json` at the project root sets global defaults (no header, show source, hide map by default). Individual blocks can override these with inline `===...===` YAML front matter. (You can also remove the usage of these global settings via the YAML header of each `qmd` file.)
+The `argdown.config.json` at the project root sets global defaults. Individual blocks can override these with inline `===...===` YAML front matter. (You can also remove the usage of these global settings via the YAML header of each `qmd` file.)
 
 > **`embed-resources` note:** Reveal.js web components require external scripts — `embed-resources: true` is incompatible with Argdown web-component mode.
 
@@ -314,7 +366,6 @@ If you don't use Argdown in a particular handout, the filter and settings are ha
 ### Argdown in Beamer slides
 
 Beamer (PDF) slides include `syntax-definitions` for argdown source block highlighting. However, `argdown-map` blocks with `mode: web-component` are silently dropped in PDF output. For Beamer documents that need argument maps, replace argdown-map blocks with equivalent images or use a separate handout artifact. ( 🚧 #TODO: There should be a better solution.)
-
 
 ## Argdown Filter: Hints & Key Caveats
 
